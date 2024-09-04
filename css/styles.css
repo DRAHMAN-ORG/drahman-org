@@ -24,7 +24,7 @@ body {
         var(--secondary-color)
     );
     background-size: 400% 400%;
-    animation: gradientBG 180s ease infinite; /* Aumenta la duración para una animación más lenta */
+    animation: gradientBG 5s ease infinite; /* Aumenta la duración para una animación más lenta */
 }
 
 @keyframes gradientBG {
