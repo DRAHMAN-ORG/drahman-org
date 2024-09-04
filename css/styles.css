@@ -1,189 +1,46 @@
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #FF6B6B; /* Un tono de rosa para el amanecer */
+    --secondary-color: #4EC5F3; /* Un tono de azul claro para el cielo */
+    --accent-color: #FFD54F; /* Un tono de amarillo para el sol */
+}
 
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --primary-color: #FF6600;
-            --secondary-color: #FF9900;
-            --accent-color: #0056b3;
-        }
+body {
+    /* ... tus estilos existentes ... */
+}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            transition: background-color 0.3s, color 0.3s;
-            overflow-x: hidden;
-        }
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15; /* Aumenta la opacidad para que sea más visible */
+    background: linear-gradient(45deg, 
+        var(--primary-color), 
+        var(--accent-color), 
+        var(--secondary-color)
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 180s ease infinite; /* Aumenta la duración para una animación más lenta */
+}
 
-        body.dark-mode {
-            --bg-color: #121212;
-            --text-color: #ffffff;
-            --accent-color: #4db8ff;
-        }
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-        .background-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.05;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-        }
+/* Añadir un poco de movimiento en el contenido para complementar el fondo */
+.hero {
+    animation: fadeIn 3s ease-out forwards;
+}
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin-left: 20px;
-            transition: color 0.3s ease;
-            font-weight: 400;
-        }
-
-        nav a:hover {
-            color: var(--primary-color);
-        }
-
-        .hero {
-            text-align: center;
-            padding: 60px 0;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-weight: 600;
-            word-wrap: break-word;
-            hyphens: auto;
-        }
-
-        .subtitle {
-            font-size: 24px;
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            color: #ffffff;
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-size: 18px;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
-        }
-
-        .features {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 60px;
-        }
-
-        .feature {
-            flex-basis: 30%;
-            text-align: center;
-            margin-bottom: 40px;
-            transition: transform 0.3s ease;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-
-        .feature:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 20px;
-        }
-
-        .characters {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 60px;
-        }
-
-        .character {
-            flex-basis: 22%;
-            text-align: center;
-            margin-bottom: 40px;
-            transition: transform 0.3s ease;
-        }
-
-        .character:hover {
-            transform: scale(1.05);
-        }
-
-        .character img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .section {
-            margin-bottom: 60px;
-        }
-
-        #theme-toggle {
-            background: none;
-            border: none;
-            color: var(--text-color);
-            cursor: pointer;
-            font-size: 24px;
-        }
-
-        @media (max-width: 768px) {
-            .feature, .character {
-                flex-basis: 45%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .feature, .character {
-                flex-basis: 100%;
-            }
-        }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
