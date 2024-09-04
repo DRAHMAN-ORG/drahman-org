@@ -33,14 +33,14 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        opacity: 0.15; /* Aumenta la opacidad para que sea más visible */
+        opacity: 0.2; /* Aumenta la opacidad para que sea más visible */
         background: linear-gradient(45deg, 
             var(--primary-color), 
             var(--accent-color), 
             var(--secondary-color)
         );
         background-size: 400% 400%;
-        animation: gradientBG 180s ease infinite; /* Aumenta la duración para una animación más lenta */
+        animation: gradientBG 120s ease infinite; /* Aumenta la duración para una animación más lenta */
 }
 
       @keyframes gradientBG {
@@ -79,6 +79,7 @@
 
         nav a:hover {
             color: var(--primary-color);
+            animation: gradientBG 120s ease infinite;
         }
 
         .hero {
@@ -113,7 +114,7 @@
             border-radius: 30px;
             font-size: 18px;
             font-weight: 600;
-            transition: transform 3s ease, box-shadow 3s ease;
+            transition: transform 0.5s ease, box-shadow 3s ease;
         }
 
         .cta-button:hover {
