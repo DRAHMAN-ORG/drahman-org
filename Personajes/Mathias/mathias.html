@@ -4,8 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathia Drahmán - Tu Heroína de las Matemáticas</title>
-    <link rel="stylesheet" href="/drahman-org/css/styles.css">
-    <link rel="stylesheet" href="/drahman-org/css/personajes.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        :root {
+            --primary-color: #FF6B6B;
+            --secondary-color: #4EC5F3;
+            --accent-color: #FFD54F;
+            --bg-color: #ffffff;
+            --text-color: #333333;
+        }
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 1rem;
+        }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav a:focus {
+            color: var(--primary-color);
+        }
+        .mathia-hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 0;
+        }
+        .mathia-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            max-width: 100%;
+            height: auto;
+        }
+        .mathia-image:hover {
+            transform: scale(1.05);
+        }
+        .mathia-description {
+            flex: 1;
+            min-width: 300px;
+            padding-left: 2rem;
+        }
+        .mathia-grades {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .mathia-grade {
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .mathia-grade:hover, .mathia-grade:focus {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+            outline: none;
+        }
+        .example-interaction {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .video-placeholder {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: #666;
+            margin-top: 2rem;
+            position: relative;
+        }
+        .video-placeholder::after {
+            content: "[Aquí irá un video de presentación de Mathia]";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                margin-top: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 0.5rem;
+            }
+            .mathia-hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .mathia-description {
+                padding-left: 0;
+                margin-top: 1rem;
+            }
+            .mathia-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        @media (max-width: 480px) {
+            .mathia-grades {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="background-animation" aria-hidden="true"></div>
@@ -18,11 +180,21 @@
                     <li><a href="#about">Acerca de Mathia ℹ️</a></li>
                     <li><a href="#grades">Grados 🎓</a></li>
                     <li><a href="#examples">Ejemplos 📚</a></li>
+
+    
+          
+            
+    
+
+          
+          Expand Down
+    
+    
+  
                 </ul>
             </nav>
             <button id="theme-toggle" aria-label="Cambiar tema">🌓</button>
         </header>
-
         <main>
             <section id="about" class="mathia-hero">
                 <img src="/drahman-org/img/ Mathia_result.webp" alt="Ilustración de Mathia Drahmán, una heroína matemática con cabello brillante y ojos llenos de sabiduría" class="mathia-image">
@@ -35,7 +207,6 @@
                     <a href="#grades" class="cta-button">¡Descubre tu Mathia! 🚀</a>
                 </div>
             </section>
-
             <section id="grades" aria-labelledby="grades-title">
                 <h2 id="grades-title">Mathia para cada grado 🎓</h2>
                 <p>Elige la Mathia que mejor se adapte a tu nivel de aprendizaje:</p>
@@ -52,7 +223,6 @@
                     <a href="https://poe.com/Mathia_10mo_Drahman" class="mathia-grade">Mathia 10mo Grado 🐉</a>
                 </div>
             </section>
-
             <section id="examples" aria-labelledby="examples-title">
                 <h2 id="examples-title">Aprende con Mathia 📚✨</h2>
                 <p>Mathia está aquí para hacer que aprender matemáticas sea rápido, divertido y emocionante. ¡Mira estos ejemplos!</p>
@@ -67,28 +237,23 @@
                     <p><strong>Mathia:</strong> ¡Por supuesto! Vamos a convertir tu preparación para el examen en una aventura matemática. 🚀 Imagina que las fracciones son porciones de una deliciosa pizza. 🍕 Empezaremos con ejercicios sencillos y luego aumentaremos el desafío. Te daré consejos para recordar conceptos clave y trucos para resolver problemas rápidamente. ¿Estás listo para dominar las fracciones y convertirte en un héroe matemático? 💪🦸‍♂️</p>
                 </div>
             </section>
-
             <section id="video" aria-labelledby="video-title">
                 <h2 id="video-title">Conoce más sobre Mathia 🎥</h2>
                 <div class="video-placeholder" role="img" aria-label="Espacio reservado para un video de presentación de Mathia"></div>
             </section>
         </main>
-
         <footer role="contentinfo">
             <p>&copy; 2024 Drahmán. Todos los derechos reservados.</p>
         </footer>
     </div>
-
     <script>
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
-
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌓';
             themeToggle.setAttribute('aria-label', body.classList.contains('dark-mode') ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
         });
-
         // Hacer los elementos de grado focusables y navegables por teclado
         const gradeLinks = document.querySelectorAll('.mathia-grade');
         gradeLinks.forEach(link => {
