@@ -1,15 +1,29 @@
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
+document.addEventListener('DOMContentLoaded', (event) => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
 
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌓';
-        });
-        const gradeLinks = document.querySelectorAll('.mathia-grade');
-        gradeLinks.forEach(link => {
-            link.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') {
-                    e.target.click();
-                }
-            });
-        });
+    menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // Cierra el menú si se hace clic fuera de él
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = nav.contains(event.target);
+        const isClickOnMenuToggle = menuToggle.contains(event.target);
+        if (!isClickInsideNav && !isClickOnMenuToggle && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Maneja la navegación con teclado
+    nav.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            nav.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.focus();
+        }
+    });
+});
