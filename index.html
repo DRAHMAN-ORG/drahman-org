@@ -12,35 +12,35 @@
     <link rel="preload" href="/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
     <div class="background-animation" aria-hidden="true"></div>
     <div class="container">
-        <header>
-            <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-            <h1 class="logo">
-                <a href="/" aria-label="Inicio de Drahmán">Drahmán</a>
-            </h1>
-            <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <nav aria-label="Navegación principal">
-                <ul>
-                    <li><a href="#about">Acerca de</a></li>
-                    <li><a href="#features">Características</a></li>
-                    <li><a href="#characters">Personajes</a></li>
-                    <li><a href="#myth">El Mito</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+        <header class="header">
+            <nav class="header__nav">
+                <h1 class="header__logo">
+                    <a href="/" aria-label="Inicio de Drahmán">Drahmán</a>
+                </h1>
+                <button id="menu-toggle" class="header__menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="header__menu-toggle-bar"></span>
+                    <span class="header__menu-toggle-bar"></span>
+                    <span class="header__menu-toggle-bar"></span>
+                </button>
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="#about" class="header__menu-link">Acerca de</a></li>
+                    <li class="header__menu-item"><a href="#features" class="header__menu-link">Características</a></li>
+                    <li class="header__menu-item"><a href="#characters" class="header__menu-link">Personajes</a></li>
+                    <li class="header__menu-item"><a href="#myth" class="header__menu-link">El Mito</a></li>
+                    <li class="header__menu-item"><a href="#contact" class="header__menu-link">Contacto</a></li>
                 </ul>
             </nav>
-            <button id="theme-toggle" aria-label="Cambiar tema claro/oscuro">🌓</button>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro">🌓</button>
         </header>
 
         <main id="main-content">
             <section class="hero" aria-labelledby="hero-title">
-                <h2 id="hero-title">Enciende el Fuego del Conocimiento con Drahmán</h2>
-                <p class="subtitle">Una plataforma educativa innovadora que integra IA de forma ética y responsable en el aula</p>
-                <a href="https://sites.google.com/view/drahman-beta/los-drahmanes" class="cta-button">¡Explora Drahmán Ahora!</a>
+                <h2 id="hero-title" class="hero__title">Enciende el Fuego del Conocimiento con Drahmán</h2>
+                <p class="hero__subtitle">Una plataforma educativa innovadora que integra IA de forma ética y responsable en el aula</p>
+                <a href="https://sites.google.com/view/drahman-beta/los-drahmanes" class="button">¡Explora Drahmán Ahora!</a>
             </section>
 
             <section id="about" class="section" aria-labelledby="about-title">
@@ -48,64 +48,64 @@
                 <p>Los Drahmanes son guardianes del conocimiento que combaten la ignorancia y promueven el aprendizaje. Cada Drahmán representa un área del saber y está diseñado para inspirar y guiar a los estudiantes en su viaje educativo, utilizando la inteligencia artificial de manera ética y responsable.</p>
             </section>
 
-            <section id="features" class="features section" aria-labelledby="features-title">
+            <section id="features" class="features" aria-labelledby="features-title">
                 <h2 id="features-title">Características</h2>
-                <p class="feature-description">Drahmán integra los beneficios de la IA en tu aula de forma natural y sin complicaciones. Sin necesidad de conocimientos técnicos, transforma tu enseñanza y garantiza un aprendizaje más efectivo, personalizado y emocionante para cada estudiante. El futuro de la educación está al alcance de tu mano, permitiéndote inspirar, motivar y potenciar el talento de la próxima generación.</p>
-                <div class="features-grid">
+                <p class="features__description">Drahmán integra los beneficios de la IA en tu aula de forma natural y sin complicaciones. Sin necesidad de conocimientos técnicos, transforma tu enseñanza y garantiza un aprendizaje más efectivo, personalizado y emocionante para cada estudiante. El futuro de la educación está al alcance de tu mano, permitiéndote inspirar, motivar y potenciar el talento de la próxima generación.</p>
+                <div class="features__grid">
                     <div class="feature">
-                        <img src="img/aulaDrahmanwebp.webp" alt="" width="80" height="80" loading="lazy">
-                        <h3>IA Ética en el Aula</h3>
-                        <p>Integra tecnología de vanguardia de manera responsable y segura en tus clases, fomentando un aprendizaje innovador y consciente.</p>
+                        <img src="img/aulaDrahmanwebp.webp" alt="" class="feature__image" width="80" height="80" loading="lazy">
+                        <h3 class="feature__title">IA Ética en el Aula</h3>
+                        <p class="feature__description">Integra tecnología de vanguardia de manera responsable y segura en tus clases, fomentando un aprendizaje innovador y consciente.</p>
                     </div>
                     <div class="feature">
-                        <img src="img/aprendizaje-personalizado.webp" alt="" width="80" height="80" loading="lazy">
-                        <h3>Aprendizaje Personalizado</h3>
-                        <p>Adapta la experiencia educativa a las necesidades individuales de cada estudiante, maximizando su potencial de aprendizaje.</p>
+                        <img src="img/aprendizaje-personalizado.webp" alt="" class="feature__image" width="80" height="80" loading="lazy">
+                        <h3 class="feature__title">Aprendizaje Personalizado</h3>
+                        <p class="feature__description">Adapta la experiencia educativa a las necesidades individuales de cada estudiante, maximizando su potencial de aprendizaje.</p>
                     </div>
                     <div class="feature">
-                        <img src="img/recursos-dinamicos.webp" alt="" width="80" height="80" loading="lazy">
-                        <h3>Recursos Dinámicos</h3>
-                        <p>Accede a una amplia gama de materiales interactivos y actualizados, diseñados para mantener el compromiso y la curiosidad de los estudiantes.</p>
+                        <img src="img/recursos-dinamicos.webp" alt="" class="feature__image" width="80" height="80" loading="lazy">
+                        <h3 class="feature__title">Recursos Dinámicos</h3>
+                        <p class="feature__description">Accede a una amplia gama de materiales interactivos y actualizados, diseñados para mantener el compromiso y la curiosidad de los estudiantes.</p>
                     </div>
                     <div class="feature">
-                        <img src="img/playground-ai.webp" alt="Icono de Explorador de IA" width="80" height="80" loading="lazy">
-                        <h3>Explorador de IA</h3>
-                        <p>Un espacio dedicado para que maestros y estudiantes exploren y comparen diferentes modelos de IA generativa, fomentando la comprensión y el uso crítico de estas tecnologías.</p>
+                        <img src="img/playground-ai.webp" alt="Icono de Explorador de IA" class="feature__image" width="80" height="80" loading="lazy">
+                        <h3 class="feature__title">Explorador de IA</h3>
+                        <p class="feature__description">Un espacio dedicado para que maestros y estudiantes exploren y comparen diferentes modelos de IA generativa, fomentando la comprensión y el uso crítico de estas tecnologías.</p>
                     </div>
                     <div class="feature">
-                        <img src="img/PlanifaiDrahman_result.webp" alt="" width="80" height="80" loading="lazy">
-                        <h3>Planifia: Asistente del Maestro</h3>
-                        <p>Un bot inteligente diseñado para ayudar a los docentes en la planificación de lecciones, evaluaciones y tareas administrativas, optimizando su tiempo y mejorando la calidad educativa.</p>
+                        <img src="img/PlanifaiDrahman_result.webp" alt="" class="feature__image" width="80" height="80" loading="lazy">
+                        <h3 class="feature__title">Planifia: Asistente del Maestro</h3>
+                        <p class="feature__description">Un bot inteligente diseñado para ayudar a los docentes en la planificación de lecciones, evaluaciones y tareas administrativas, optimizando su tiempo y mejorando la calidad educativa.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="characters" class="characters section" aria-labelledby="characters-title">
+            <section id="characters" class="characters" aria-labelledby="characters-title">
                 <h2 id="characters-title">Personajes</h2>
-                <p class="narrative-intro">
+                <p class="characters__intro">
                     Dale vida a tus clases con los Drahmanes, guardianes que transforman la educación en una aventura inolvidable. A través de fascinantes narrativas y cuentos cautivadores, cada lección se vuelve emocionante y significativa. Este enfoque innovador no solo atrae a los estudiantes, sino que también potencia su comprensión, retención y pensamiento crítico. Con nuestros personajes, tus alumnos vivirán el conocimiento, forjando conexiones emocionales que perdurarán más allá del aula. Descubre cómo los Drahmanes iluminan cada área del saber con desafíos narrativos y aventuras educativas, inspirando una pasión duradera por el aprendizaje en cada estudiante.
                 </p>
-                <div class="characters-grid">
+                <div class="characters__grid">
                     <div class="character">
-                        <img src="img/Cenia1_result.webp" alt="Cenia, guardiana de las Ciencias Naturales" width="150" height="150" loading="lazy">
-                        <h3>Cenia</h3>
-                        <p>Guardiana de las Ciencias Naturales, inspira la curiosidad por el mundo natural y fomenta la conciencia ambiental.</p>
+                        <img src="img/Cenia1_result.webp" alt="Cenia, guardiana de las Ciencias Naturales" class="character__image" width="150" height="150" loading="lazy">
+                        <h3 class="character__name">Cenia</h3>
+                        <p class="character__description">Guardiana de las Ciencias Naturales, inspira la curiosidad por el mundo natural y fomenta la conciencia ambiental.</p>
                     </div>
                     <div class="character">
-                        <img src="img/Mathia_result.webp" alt="Mathia, maestra de las Matemáticas" width="150" height="150" loading="lazy">
-                        <h3>Mathia</h3>
-                        <p>Maestra de las Matemáticas, transforma los números y ecuaciones en aventuras lógicas fascinantes.</p>
-                        <a href="Personajes/Mathia/mathia.html" class="cta-button">¡Conoce a Mathia Drahmán!</a>
+                        <img src="img/Mathia_result.webp" alt="Mathia, maestra de las Matemáticas" class="character__image" width="150" height="150" loading="lazy">
+                        <h3 class="character__name">Mathia</h3>
+                        <p class="character__description">Maestra de las Matemáticas, transforma los números y ecuaciones en aventuras lógicas fascinantes.</p>
+                        <a href="Personajes/Mathia/mathia.html" class="button button--secondary">¡Conoce a Mathia Drahmán!</a>
                     </div>
                     <div class="character">
-                        <img src="img/Lenia3_result.webp" alt="Lenia, protectora de la Lengua y Literatura" width="150" height="150" loading="lazy">
-                        <h3>Lenia</h3>
-                        <p>Protectora de la Lengua y Literatura, despierta la pasión por las palabras y las historias que dan forma a nuestra cultura.</p>
+                        <img src="img/Lenia3_result.webp" alt="Lenia, protectora de la Lengua y Literatura" class="character__image" width="150" height="150" loading="lazy">
+                        <h3 class="character__name">Lenia</h3>
+                        <p class="character__description">Protectora de la Lengua y Literatura, despierta la pasión por las palabras y las historias que dan forma a nuestra cultura.</p>
                     </div>
                     <div class="character">
-                        <img src="img/SOCIA_result.webp" alt="Socia, guía de los Estudios Sociales" width="150" height="150" loading="lazy">
-                        <h3>Socia</h3>
-                        <p>Guía de los Estudios Sociales, revela las conexiones entre el pasado, el presente y el futuro de nuestras sociedades.</p>
+                        <img src="img/SOCIA_result.webp" alt="Socia, guía de los Estudios Sociales" class="character__image" width="150" height="150" loading="lazy">
+                        <h3 class="character__name">Socia</h3>
+                        <p class="character__description">Guía de los Estudios Sociales, revela las conexiones entre el pasado, el presente y el futuro de nuestras sociedades.</p>
                     </div>
                 </div>
             </section>
@@ -113,14 +113,14 @@
             <section id="myth" class="section" aria-labelledby="myth-title">
                 <h2 id="myth-title">El Mito de los Drahmanes</h2>
                 <p>Pronto descubrirás la fascinante leyenda de los Drahmanes, guardianes ancestrales del conocimiento que han emergido en la era digital. Mantente atento para sumergirte en esta épica historia que une la sabiduría antigua con la tecnología moderna.</p>
-                <a href="#" class="cta-button">Suscríbete para ser el primero en conocer el mito</a>
+                <a href="#" class="button">Suscríbete para ser el primero en conocer el mito</a>
             </section>
 
             <!-- Sección de testimonios comentada para futura implementación -->
             <!--
             <section id="testimonios" class="section" aria-labelledby="testimonios-title">
                 <h2 id="testimonios-title">Lo que dicen nuestros usuarios</h2>
-                <div class="testimonios-container">
+                <div class="testimonios__container">
                     Los testimonios se añadirán aquí en el futuro
                 </div>
             </section>
@@ -129,19 +129,19 @@
             <section id="contact" class="section" aria-labelledby="contact-title">
                 <h2 id="contact-title">Únete a la Evolución Educativa</h2>
                 <p>Descubre cómo Drahmán puede transformar tu aula y preparar a tus estudiantes para los desafíos del futuro. Juntos, podemos encender el fuego del conocimiento en cada joven mente.</p>
-                <a href="https://sites.google.com/view/drahman-beta/los-drahmanes" class="cta-button">¡Comienza Gratis Ahora!</a>
+                <a href="https://sites.google.com/view/drahman-beta/los-drahmanes" class="button">¡Comienza Gratis Ahora!</a>
             </section>
         </main>
 
-        <footer>
-            <nav aria-label="Navegación del pie de página">
-                <ul>
-                    <li><a href="/privacidad">Política de Privacidad</a></li>
-                    <li><a href="/terminos">Términos de Servicio</a></li>
-                    <li><a href="/contacto">Contacto</a></li>
+        <footer class="footer">
+            <nav class="footer__nav" aria-label="Navegación del pie de página">
+                <ul class="footer__menu">
+                    <li class="footer__menu-item"><a href="/privacidad" class="footer__menu-link">Política de Privacidad</a></li>
+                    <li class="footer__menu-item"><a href="/terminos" class="footer__menu-link">Términos de Servicio</a></li>
+                    <li class="footer__menu-item"><a href="/contacto" class="footer__menu-link">Contacto</a></li>
                 </ul>
             </nav>
-            <p>&copy; 2024 Drahmán. Todos los derechos reservados.</p>
+            <p class="footer__copyright">&copy; 2024 Drahmán. Todos los derechos reservados.</p>
         </footer>
     </div>
     <script src="/drahman-org/js/script.js" defer></script>
