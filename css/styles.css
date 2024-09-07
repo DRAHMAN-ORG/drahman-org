@@ -39,12 +39,16 @@
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
 }
+
+/* Tema oscuro */
 [data-theme="dark"] {
     --color-background: #121212;
     --color-text: #ffffff;
-    /* otras variables para el tema oscuro */
+    --color-primary: #FF8F8F; /* Versión más clara del color primario */
+    --color-secondary: #6ECFFF; /* Versión más clara del color secundario */
+    --color-accent: #FFE17F; /* Versión más clara del color de acento */
+    --box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
-
 /* Estilos base */
 body {
     font-family: var(--font-family-primary);
@@ -299,21 +303,17 @@ h3 { font-size: var(--font-size-h3); }
     font-size: var(--font-size-h3);
 }
 
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-background: #121212;
-        --color-text: #ffffff;
-    }
-    
-    .button {
-        background-color: var(--color-secondary);
-    }
-    
-    .button:hover, .button:focus {
-        background-color: #3ab1e0;
-    }
+/* Estilos específicos para modo oscuro */
+[data-theme="dark"] .button {
+    background-color: var(--color-secondary);
 }
+
+[data-theme="dark"] .button:hover,
+[data-theme="dark"] .button:focus {
+    background-color: #3ab1e0;
+}
+
+
 
 /* Responsive adjustments */
 @media (max-width: var(--breakpoint-md)) {
