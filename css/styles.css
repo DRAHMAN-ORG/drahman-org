@@ -7,11 +7,24 @@
 
 /* Variables CSS */
 :root {
-    /* Colores inspirados en el amanecer y cielos ecuatorianos */
+ 
+}
+
+[data-theme="dark"] {
+
+}
+:root {
+    /* Colores inspirados en el amanecer y cielos ecuatorianos 
     --color-primary: #FF6B6B;
     --color-secondary: #4EC5F3;
     --color-accent: #FFD54F;
     --color-background: #ffffff;
+    --color-text: #333333;*/
+
+    --color-primary: #FF6B6B;
+    --color-secondary: #4ECDC4;
+    --color-accent: #FFD93D;
+    --color-background: #F8F9FA;
     --color-text: #333333;
     
     /* Tipografía */
@@ -42,12 +55,19 @@
 
 /* Tema oscuro */
 [data-theme="dark"] {
-    --color-background: #121212;
+    --color-background: #222831;
+    --color-text: #EEEEEE;
+    --color-primary: #FF8E8E;
+    --color-secondary: #6BE0D5;
+    --color-accent: #FFE566;
+   
+   /* --color-background: #121212;
     --color-text: #ffffff;
     --color-primary: #FF8F8F; /* Versión más clara del color primario */
-    --color-secondary: #6ECFFF; /* Versión más clara del color secundario */
-    --color-accent: #FFE17F; /* Versión más clara del color de acento */
+    /*--color-secondary: #6ECFFF; /* Versión más clara del color secundario */
+    /*--color-accent: #FFE17F; /* Versión más clara del color de acento */
     --box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+   
 }
 /* Estilos base */
 body {
