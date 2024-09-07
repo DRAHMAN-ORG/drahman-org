@@ -20,9 +20,10 @@
     border-radius: 50%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: transform var(--personaje-transition);
-    max-width: 100%;
-    height: auto;
+    /*max-width: 100%;
+    height: auto;*/
 }
+
 
 .personaje-image:hover,
 .personaje-image:focus {
