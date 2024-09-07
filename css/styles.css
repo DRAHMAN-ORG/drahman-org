@@ -127,7 +127,7 @@ h3 { font-size: var(--font-size-h3); }
 /* Componentes */
 .button {
     display: inline-block;
-    padding: var(--spacing-small) var(--spacing-medium);
+    padding: var(--spacing-small) var(--spacing-large);
     border: none;
     border-radius: var(--border-radius);
     background-color: var(--color-primary);
@@ -135,12 +135,15 @@ h3 { font-size: var(--font-size-h3); }
     text-decoration: none;
     font-weight: 600;
     transition: background-color var(--transition-speed), transform var(--transition-speed);
-    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .button:hover, .button:focus {
     background-color: #e55a5a; /* Versión más oscura del color primario */
     transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .button--secondary {
