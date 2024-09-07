@@ -29,8 +29,8 @@
     --spacing-large: calc(var(--spacing-unit) * 5);
     
     /* Otros */
-    --border-radius: 4px;
-    --transition-speed: 0.3s;
+    --border-radius: 5px;
+    --transition-speed: 0.5s;
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     
     /* Breakpoints */
