@@ -215,7 +215,7 @@
             </section>
             <section id="examples" aria-labelledby="examples-title">
                 <h2 id="examples-title">Aprende con Mathia 📚✨</h2>
-                <p>Mathia está aquí para hacer que aprender matemáticas sea rápido, divertido y emocionante. ¡Mira estos ejemplos!</p>
+                <p>Mathia está aquí para hacer que aprender matemáticas sea divertido y emocionante. ¡Mira estos ejemplos!</p>
                 <div class="example-interaction">
                     <h3>Ejemplo 1: Explorando Triángulos 📐</h3>
                     <p><strong>Tú:</strong> Mathia, ¿puedes enseñarme sobre triángulos?</p>
@@ -236,23 +236,8 @@
             <p>&copy; 2024 Drahmán. Todos los derechos reservados.</p>
         </footer>
     </div>
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌓';
-            themeToggle.setAttribute('aria-label', body.classList.contains('dark-mode') ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
-        });
-        // Hacer los elementos de grado focusables y navegables por teclado
-        const gradeLinks = document.querySelectorAll('.mathia-grade');
-        gradeLinks.forEach(link => {
-            link.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') {
-                    e.target.click();
-                }
-            });
-        });
-    </script>
+    <script src="/drahman-org/js/theme-toggle.js"></script>
+    <script src="/drahman-org/js/personajes.js"></script>
+
 </body>
 </html>
