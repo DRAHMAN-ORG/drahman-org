@@ -1,216 +1,158 @@
-/* style.css */
-/* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+/* personajes.css */
 /* CSS Variables */
 :root {
-    /* Colors */
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --primary-color: #FF6B6B;
-    --secondary-color: #4EC5F3;
-    --accent-color: #FFD54F;
-    
-    /* Transitions */
-    --transition-speed: 0.3s;
-    
-    /* Shadows */
-    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    
-    /* Font sizes */
-    --font-size-base: 16px;
-    --font-size-h1: clamp(32px, 5vw, 48px);
-    --font-size-h2: clamp(24px, 4vw, 36px);
-    --font-size-subtitle: clamp(18px, 3vw, 24px);
+    --personaje-transition: 0.3s ease;
+    --personaje-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
 }
 
-/* Base styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    font-size: var(--font-size-base);
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    transition: background-color var(--transition-speed), color var(--transition-speed);
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Background animation */
-.background-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.2;
-    background: linear-gradient(45deg, 
-        var(--primary-color), 
-        var(--accent-color), 
-        var(--secondary-color)
-    );
-    background-size: 400% 400%;
-    animation: gradientBG 120s ease infinite;
-}
-
-@keyframes gradientBG {
-    0%, 100% { background-position: 0% 50%; }
-    25%, 75% { background-position: 50% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-/* Header styles */
-header {
+/* Character hero section */
+.personaje-hero {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 20px 0;
+    justify-content: space-between;
+    padding: 2rem 0;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: 600;
+.personaje-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform var(--personaje-transition);
+    max-width: 100%;
+    height: auto;
 }
 
-nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin-left: 20px;
-    transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
-    font-weight: 400;
-}
-
-nav a:hover, nav a:focus {
-    color: var(--primary-color);
+.personaje-image:hover,
+.personaje-image:focus {
     transform: scale(1.05);
 }
 
-/* Hero section */
-.hero {
+.personaje-description {
+    flex: 1;
+    min-width: 300px;
+    padding-left: 2rem;
+}
+
+/* Character grades */
+.personaje-grades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.personaje-grade {
+    display: block;
     text-align: center;
-    padding: 60px 0;
-    animation: fadeIn 3s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-h1 {
-    font-size: var(--font-size-h1);
-    margin-bottom: 20px;
-    font-weight: 600;
-    word-wrap: break-word;
-    hyphens: auto;
-}
-
-.subtitle {
-    font-size: var(--font-size-subtitle);
-    margin-bottom: 40px;
-    font-weight: 300;
-}
-
-/* CTA Button */
-.cta-button {
-    display: inline-block;
+    padding: 1rem;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: #ffffff;
+    border-radius: 10px;
+    color: white;
     text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: 600;
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    transition: transform var(--personaje-transition), box-shadow var(--personaje-transition);
 }
 
-.cta-button:hover, .cta-button:focus {
+.personaje-grade:hover,
+.personaje-grade:focus {
     transform: translateY(-5px);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--personaje-shadow);
+    outline: none;
 }
 
-/* Sections */
-.section {
-    margin-bottom: 60px;
+/* Example interaction */
+.example-interaction {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
-/* Theme toggle */
-#theme-toggle {
-    background: none;
-    border: none;
-    color: var(--text-color);
-    cursor: pointer;
-    font-size: 24px;
+/* Video placeholder */
+.video-placeholder {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #666;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.video-placeholder::after {
+    content: "[Aquí irá un video de presentación del personaje]";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 /* Responsive design */
 @media (max-width: 1024px) {
-    .container {
-        padding: 15px;
+    .personaje-hero {
+        padding: 1.5rem 0;
     }
     
-    h1 {
-        font-size: clamp(28px, 4vw, 40px);
+    .personaje-image {
+        width: 250px;
+        height: 250px;
     }
     
-    .subtitle {
-        font-size: clamp(16px, 2.5vw, 20px);
+    .personaje-description {
+        min-width: 250px;
     }
 }
 
 @media (max-width: 768px) {
-    header {
+    .personaje-hero {
         flex-direction: column;
-        align-items: flex-start;
+        text-align: center;
+    }
+
+    .personaje-description {
+        padding-left: 0;
+        margin-top: 1rem;
+    }
+
+    .personaje-image {
+        width: 200px;
+        height: 200px;
     }
     
-    nav {
-        margin-top: 15px;
-    }
-    
-    nav a {
-        margin-left: 0;
-        margin-right: 20px;
-    }
-    
-    .cta-button {
-        padding: 12px 24px;
-        font-size: 16px;
-    }
-    
-    .feature, .character {
-        flex-basis: 45%;
+    .personaje-grades {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
 
 @media (max-width: 480px) {
-    .hero {
-        padding: 40px 0;
+    .personaje-image {
+        width: 150px;
+        height: 150px;
     }
     
-    .cta-button {
-        display: block;
-        width: 100%;
-        text-align: center;
+    .personaje-grade {
+        padding: 0.8rem;
+        font-size: 14px;
     }
     
-    .feature, .character {
-        flex-basis: 100%;
+    .video-placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .personaje-grades {
+        grid-template-columns: 1fr;
     }
 }
 
 /* High-resolution screens */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .feature img,
-    .character img {
+    .personaje-image {
         image-rendering: -webkit-optimize-contrast;
         image-rendering: crisp-edges;
     }
@@ -218,21 +160,25 @@ h1 {
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color: #121212;
-        --text-color: #ffffff;
-        --accent-color: #4db8ff;
+    .video-placeholder {
+        background-color: #333;
+        color: #ccc;
     }
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-    .background-animation,
-    .hero,
-    .cta-button,
-    .feature,
-    .character {
+    .personaje-image,
+    .personaje-grade {
         animation: none;
         transition: none;
+    }
+}
+
+/* Touch-friendly interactions for mobile devices */
+@media (pointer: coarse) {
+    .personaje-grade {
+        min-height: 44px;
+        min-width: 44px;
     }
 }
