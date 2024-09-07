@@ -80,6 +80,7 @@
         nav a:hover {
             color: var(--primary-color);
             animation: gradientBG 120s ease infinite;
+            transform: scale(1.05);
         }
 
         .hero {
