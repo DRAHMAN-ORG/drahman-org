@@ -5,10 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathia Drahmán - Tu Heroína de las Matemáticas</title>
     <link rel="stylesheet" href="/drahman-org/css/styles.css">
-    <link rel="stylesheet" href="drahman-org/css/peronajes.css">
+    <link rel="stylesheet" href="/drahman-org/css/personajes.css">
     <style>
-
-        .-hero {
+        :root {
+            --primary-color: #FF6B6B;
+            --secondary-color: #4EC5F3;
+            --accent-color: #FFD54F;
+            --bg-color: #ffffff;
+            --text-color: #333333;
+        }
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 1rem;
+        }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav a:focus {
+            color: var(--primary-color);
+        }
+        .mathia-hero {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -148,7 +197,7 @@
             <button id="theme-toggle" aria-label="Cambiar tema">🌓</button>
         </header>
         <main>
-            <section id="about" class="personaje-hero">
+            <section id="about" class="mathia-hero">
                 <img src="/drahman-org/img/ Mathia_result.webp" alt="Ilustración de Mathia Drahmán, una heroína matemática con cabello brillante y ojos llenos de sabiduría" class="mathia-image">
                 <div class="mathia-description">
                     <h1>Mathia Drahmán 🦸‍♀️🔢</h1>
@@ -168,7 +217,7 @@
                     <a href="https://poe.com/Mathia_3ero_Drahman" class="mathia-grade">Mathia 3er Grado 🐤</a>
                     <a href="https://poe.com/Mathia_4to_Drahman" class="mathia-grade">Mathia 4to Grado 🐔</a>
                     <a href="https://poe.com/Mathia_5to_Drahman" class="mathia-grade">Mathia 5to Grado 🦅</a>
-                    <a href="https://poe.com/Mathia_6to_Drahman" class="mathia-grade">Mathia 6to Grado 🐉</a>
+                    <a href="https://poe.com/Mathia_6to_Drahman" class="mathia-grade">Mathia 6to Grado 🐉 </a>
                     <a href="https://poe.com/Mathia_7mo_Drahman" class="mathia-grade">Mathia 7mo Grado 🦋</a>
                     <a href="https://poe.com/Mathia_8vo_Drahman" class="mathia-grade">Mathia 8vo Grado 🐬</a>
                     <a href="https://poe.com/Mathia_9no_Drahman" class="mathia-grade">Mathia 9no Grado 🦁</a>
