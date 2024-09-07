@@ -39,6 +39,11 @@
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
 }
+[data-theme="dark"] {
+    --color-background: #121212;
+    --color-text: #ffffff;
+    /* otras variables para el tema oscuro */
+}
 
 /* Estilos base */
 body {
