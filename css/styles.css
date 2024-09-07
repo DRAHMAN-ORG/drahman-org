@@ -213,6 +213,16 @@ h3 { font-size: var(--font-size-h3); }
 .feature {
     text-align: center;
 }
+/* Estilos para la descripción de características */
+.features__description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-large);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
 
 .feature__image {
     width: 100%;
@@ -318,6 +328,10 @@ h3 { font-size: var(--font-size-h3); }
     }
    .header__menu-item {
         margin: var(--spacing-small) 0;
+    }
+   .features__description {
+        font-size: var(--font-size-small);
+        padding: 0 var(--spacing-medium);
     }
     
     .hero__title {
