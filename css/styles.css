@@ -232,17 +232,27 @@ h3 { font-size: var(--font-size-h3); }
 .hero {
     text-align: center;
     padding: var(--spacing-large) 0;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-background);
 }
 
 .hero__title {
     font-size: var(--font-size-h1);
+    font-weight: 700;
     margin-bottom: var(--spacing-medium);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero__subtitle {
     font-size: var(--font-size-h3);
+    font-weight: 300;
     margin-bottom: var(--spacing-large);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
 
 /* Features section */
 .features {
