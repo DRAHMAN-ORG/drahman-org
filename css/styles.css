@@ -6,13 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* Variables CSS */
-:root {
- 
-}
 
-[data-theme="dark"] {
-
-}
 :root {
     /* Colores inspirados en el amanecer y cielos ecuatorianos 
     --color-primary: #FF6B6B;
@@ -23,7 +17,7 @@
 
     --color-primary: #FF6B6B;
     --color-secondary: #4ECDC4;
-    --color-accent: #FFD93D;
+    --color-accent: #feeb9d;
     --color-background: #F8F9FA;
     --color-text: #333333;
     
@@ -43,7 +37,7 @@
     --spacing-large: calc(var(--spacing-unit) * 5);
     
     /* Otros */
-    --border-radius: 5px;
+    --border-radius: 8px;
     --transition-speed: 0.5s;
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     
@@ -157,9 +151,9 @@ h3 { font-size: var(--font-size-h3); }
 /* Header */
 .header {
     padding: var(--spacing-medium) 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    /*background-color: rgba(255, 255, 255, 0.95);*/
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    /*position: sticky;*/
     top: 0;
     z-index: 1000;
 }
@@ -181,7 +175,7 @@ h3 { font-size: var(--font-size-h3); }
 
 .header__menu-link:hover,
 .header__menu-link:focus {
-    background-color: var(--color-primary);
+    /*background-color: var(--color-primary);*/
     color: var(--color-background);
 }
 
@@ -203,6 +197,27 @@ h3 { font-size: var(--font-size-h3); }
 
 .header__menu-item {
     margin-left: var(--spacing-medium);
+}
+.header__menu-toggle-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Animación cuando el menú está abierto */
+.menu-open .header__menu-toggle-bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-open .header__menu-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .header__menu-toggle-bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 
