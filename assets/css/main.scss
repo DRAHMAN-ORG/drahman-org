@@ -1,49 +1,29 @@
 ---
 ---
 
+// Variables and mixins
 @import "variables";
+@import "mixins";
+
+// Base styles
 @import "base";
+@import "typography";
+
+// Layout
 @import "layout";
-@import "components";
+@import "grid";
 
-// Your existing CSS content goes here
-// You can gradually move parts of it into the appropriate partial files
+// Components
+@import "components/header";
+@import "components/footer";
+@import "components/buttons";
+@import "components/navigation";
 
-.site-nav {
-    margin: 1rem 0;
-  }
-  
-  .site-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .site-nav li {
-    margin: 0 1rem;
-  }
-  
-  .site-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .site-nav a:hover,
-  .site-nav a:focus {
-    color: var(--accent-color);
-  }
-  
-  @media (max-width: 600px) {
-    .site-nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .site-nav li {
-      margin: 0.5rem 0;
-    }
-  }
+// Pages
+@import "pages/home";
+@import "pages/personajes";
+
+// Utilities
+@import "utilities";
+
+// Existing styles (to be moved to appropriate partial files)

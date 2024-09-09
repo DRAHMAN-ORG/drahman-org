@@ -1,0 +1,20 @@
+<header class="header"></header>
+    <nav class="header__nav">
+        <h1 class="header__logo">
+            <a href="{{ '/' | relative_url }}" aria-label="Inicio de Drahmán">Drahmán</a>
+        </h1>
+        <button id="menu-toggle" class="header__menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <span class="header__menu-toggle-bar"></span>
+            <span class="header__menu-toggle-bar"></span>
+            <span class="header__menu-toggle-bar"></span>
+        </button>
+        <ul class="header__menu">
+            <li class="header__menu-item"><a href="{{ '/#about' | relative_url }}" class="header__menu-link">Acerca de</a></li>
+            <li class="header__menu-item"><a href="{{ '/#features' | relative_url }}" class="header__menu-link">Características</a></li>
+            <li class="header__menu-item"><a href="{{ '/#characters' | relative_url }}" class="header__menu-link">Personajes</a></li>
+            <li class="header__menu-item"><a href="{{ '/#myth' | relative_url }}" class="header__menu-link">El Mito</a></li>
+            <li class="header__menu-item"><a href="{{ '/#contact' | relative_url }}" class="header__menu-link">Contacto</a></li>
+        </ul>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro">🌓</button>
+</header>

@@ -2,6 +2,16 @@
 layout: default
 ---
 <article class="personaje">
-  <h1>{{ page.title }}</h1>
-  {{ content }}
+    <header class="personaje__header">
+        <h1 class="personaje__title">{{ page.title }}</h1>
+        <img src="{{ page.image | default: '/assets/images/default-character.webp' | relative_url }}" alt="{{ page.title }}" class="personaje__image" width="300" height="300">
+    </header>
+    
+    <div class="personaje__content">
+        {{ content }}
+    </div>
+
+    <footer class="personaje__footer">
+        <a href="{{ '/#characters' | relative_url }}" class="button">Volver a Personajes</a>
+    </footer>
 </article>
