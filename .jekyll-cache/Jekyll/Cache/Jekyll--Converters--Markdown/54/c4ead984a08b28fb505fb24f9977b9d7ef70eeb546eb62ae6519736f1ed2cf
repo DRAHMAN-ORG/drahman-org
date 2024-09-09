@@ -1,10 +1,4 @@
----
-layout: default
-title: Inicio
-description: "Drahmán: Plataforma educativa innovadora que integra IA de forma ética y responsable en el aula. Descubre cómo transformar la educación con los guardianes del conocimiento."
----
-
-<section class="hero" aria-labelledby="hero-title">
+I"R<section class="hero" aria-labelledby="hero-title">
     <h2 id="hero-title" class="hero__title">Enciende el Fuego del Conocimiento con Drahmán</h2>
     <p class="hero__subtitle">Una plataforma educativa innovadora que integra IA de forma ética y responsable en el aula</p>
     <a href="https://sites.google.com/view/drahman-beta/los-drahmanes" class="button">¡Explora Drahmán Ahora!</a>
@@ -19,13 +13,37 @@ description: "Drahmán: Plataforma educativa innovadora que integra IA de forma 
     <h2 id="features-title">Características</h2>
     <p>Drahmán integra los beneficios de la IA en tu aula de forma natural y sin complicaciones. Sin necesidad de conocimientos técnicos, transforma tu enseñanza y garantiza un aprendizaje más efectivo, personalizado y emocionante para cada estudiante. El futuro de la educación está al alcance de tu mano, permitiéndote inspirar, motivar y potenciar el talento de la próxima generación.</p>
     <div class="features__grid">
-        {% for feature in site.data.features %}
+        
         <div class="feature">
-            <img src="/assets/images/{{ feature[0] | slugify }}.webp" alt="Icono de {{ feature[0] }}" class="feature__image" width="80" height="80" loading="lazy">
-            <h3 class="feature__title">{{ feature[0] }}</h3>
-            <p class="feature__description">{{ feature[1] }}</p>
+            <img src="/assets/images/ia-ética-en-el-aula.webp" alt="Icono de IA Ética en el Aula" class="feature__image" width="80" height="80" loading="lazy" />
+            <h3 class="feature__title">IA Ética en el Aula</h3>
+            <p class="feature__description">Integra tecnología de vanguardia de manera responsable y segura en tus clases, fomentando un aprendizaje innovador y consciente.</p>
         </div>
-        {% endfor %}
+        
+        <div class="feature">
+            <img src="/assets/images/aprendizaje-personalizado.webp" alt="Icono de Aprendizaje Personalizado" class="feature__image" width="80" height="80" loading="lazy" />
+            <h3 class="feature__title">Aprendizaje Personalizado</h3>
+            <p class="feature__description">Adapta la experiencia educativa a las necesidades individuales de cada estudiante, maximizando su potencial de aprendizaje.</p>
+        </div>
+        
+        <div class="feature">
+            <img src="/assets/images/recursos-dinámicos.webp" alt="Icono de Recursos Dinámicos" class="feature__image" width="80" height="80" loading="lazy" />
+            <h3 class="feature__title">Recursos Dinámicos</h3>
+            <p class="feature__description">Accede a una amplia gama de materiales interactivos y actualizados, diseñados para mantener el compromiso y la curiosidad de los estudiantes.</p>
+        </div>
+        
+        <div class="feature">
+            <img src="/assets/images/explorador-de-ia.webp" alt="Icono de Explorador de IA" class="feature__image" width="80" height="80" loading="lazy" />
+            <h3 class="feature__title">Explorador de IA</h3>
+            <p class="feature__description">Un espacio dedicado para que maestros y estudiantes exploren y comparen diferentes modelos de IA generativa, fomentando la comprensión y el uso crítico de estas tecnologías.</p>
+        </div>
+        
+        <div class="feature">
+            <img src="/assets/images/planifia-asistente-del-maestro.webp" alt="Icono de Planifia: Asistente del Maestro" class="feature__image" width="80" height="80" loading="lazy" />
+            <h3 class="feature__title">Planifia: Asistente del Maestro</h3>
+            <p class="feature__description">Un bot inteligente diseñado para ayudar a los docentes en la planificación de lecciones, evaluaciones y tareas administrativas, optimizando su tiempo y mejorando la calidad educativa.</p>
+        </div>
+        
     </div>
 </section>
 
@@ -35,14 +53,14 @@ description: "Drahmán: Plataforma educativa innovadora que integra IA de forma 
         Dale vida a tus clases con los Drahmanes, guardianes que transforman la educación en una aventura inolvidable. A través de fascinantes narrativas y cuentos cautivadores, cada lección se vuelve emocionante y significativa. Este enfoque innovador no solo atrae a los estudiantes, sino que también potencia su comprensión, retención y pensamiento crítico. Con nuestros personajes, tus alumnos vivirán el conocimiento, forjando conexiones emocionales que perdurarán más allá del aula. Descubre cómo los Drahmanes iluminan cada área del saber con desafíos narrativos y aventuras educativas, inspirando una pasión duradera por el aprendizaje en cada estudiante.
     </p>
     <div class="characters__grid">
-        {% for personaje in site.personajes %}
+        
         <div class="character">
-            <img src="{{ personaje.image | default: '/assets/images/default-character.webp' | relative_url }}" alt="{{ personaje.title }}" class="character__image" width="150" height="150" loading="lazy">
-            <h3 class="character__name">{{ personaje.title }}</h3>
-            <p class="character__description">{{ personaje.description }}</p>
-            <a href="{{ personaje.url | relative_url }}" class="button">¡Conoce a {{ personaje.title }}!</a>
+            <img src="/drahman-org/drahman-org/assets/images/Mathia_result.webp" alt="Mathia Drahmán - Tu Héroe de las Matemáticas" class="character__image" width="150" height="150" loading="lazy" />
+            <h3 class="character__name">Mathia Drahmán - Tu Héroe de las Matemáticas</h3>
+            <p class="character__description">Mathia Drahmán es el guardian de las Matemáticas en el mundo de Drahmán. Con su ingenio agudo y su pasión por los números, Mathia transforma conceptos matemáticos complejos en emocionantes aventuras lógicas...</p>
+            <a href="/drahman-org/personajes/mathia/" class="button">¡Conoce a Mathia Drahmán - Tu Héroe de las Matemáticas!</a>
         </div>
-        {% endfor %}
+        
     </div>
 </section>
 
@@ -57,3 +75,4 @@ description: "Drahmán: Plataforma educativa innovadora que integra IA de forma 
     <p>Descubre cómo Drahmán puede transformar tu aula y preparar a tus estudiantes para los desafíos del futuro. Juntos, podemos encender el fuego del conocimiento en cada joven mente.</p>
     <a href="https://sites.google.com/view/drahman-beta/los-drahmanes" class="button">¡Comienza Gratis Ahora!</a>
 </section>
+:ET

@@ -1,29 +1,10 @@
----
-layout: personaje
-title: Mathia Drahmán - Tu Héroe de las Matemáticas
-image: /drahman-org/assets/images/Mathia_result.webp
-role: Maestra de las Matemáticas
-abilities: 
-  - Resolución creativa de problemas
-  - Pensamiento lógico y analítico
-  - Visualización de conceptos matemáticos
-quote: Las matemáticas son el lenguaje del universo, y juntos aprenderemos a hablarlo fluidamente.
-related_characters:
-  - name: Cenia
-    url: /personajes/cenia/
-  - name: Lenia
-    url: /personajes/lenia/
-description: Mathia Drahmán es el guardian de las Matemáticas en el mundo de Drahmán. Con su ingenio agudo y su pasión por los números, Mathia transforma conceptos matemáticos complejos en emocionantes aventuras lógicas...
-estermalink: /personajes/mathia/
----
-
-<section id="about" class="personaje-hero">
-  <img src="{{ page.image | relative_url }}" alt="Ilustración de Mathia Drahmán, un dragón héroe de las matemáticas con ojos llenos de sabiduría" class="personaje-image">
+I"�<section id="about" class="personaje-hero">
+  <img src="/drahman-org/drahman-org/assets/images/Mathia_result.webp" alt="Ilustración de Mathia Drahmán, un dragón héroe de las matemáticas con ojos llenos de sabiduría" class="personaje-image" />
   <div class="personaje-description">
-    <h1>{{ page.title }} 🦸‍♀️🔢</h1>
-    <p>Nace en la latitud cero, donde el sol besa al mar, 🌊<br>
-    Mathia Drahmán, el héroe que vino a brillar. 🌟<br>
-    Con mente ágil y corazón ardiente, ❤️‍🔥<br>
+    <h1>Mathia Drahmán - Tu Héroe de las Matemáticas 🦸‍♀️🔢</h1>
+    <p>Nace en la latitud cero, donde el sol besa al mar, 🌊<br />
+    Mathia Drahmán, el héroe que vino a brillar. 🌟<br />
+    Con mente ágil y corazón ardiente, ❤️‍🔥<br />
     Defiende la justicia con números incandescentes. 🔥🧠</p>
     <a href="#grades" class="cta-button">¡Descubre tu Mathia! 🚀</a>
   </div>
@@ -68,20 +49,25 @@ estermalink: /personajes/mathia/
   <div class="video-placeholder" role="img" aria-label="Espacio reservado para un video de presentación de Mathia"></div>
 </section>
 
-## Habilidades de Mathia
+<h2 id="habilidades-de-mathia">Habilidades de Mathia</h2>
 
-- Resolución creativa de problemas matemáticos
-- Transformación de conceptos abstractos en ejemplos concretos y divertidos
-- Adaptación a diferentes niveles de aprendizaje, desde primaria hasta bachillerato
-- Motivación y apoyo emocional para superar el miedo a las matemáticas
+<ul>
+  <li>Resolución creativa de problemas matemáticos</li>
+  <li>Transformación de conceptos abstractos en ejemplos concretos y divertidos</li>
+  <li>Adaptación a diferentes niveles de aprendizaje, desde primaria hasta bachillerato</li>
+  <li>Motivación y apoyo emocional para superar el miedo a las matemáticas</li>
+</ul>
 
-## Misión de Mathia
+<h2 id="misión-de-mathia">Misión de Mathia</h2>
 
-La misión de Mathia es inspirar a los estudiantes a ver la belleza y la utilidad de las matemáticas en el mundo que les rodea. A través de sus enseñanzas, busca:
+<p>La misión de Mathia es inspirar a los estudiantes a ver la belleza y la utilidad de las matemáticas en el mundo que les rodea. A través de sus enseñanzas, busca:</p>
 
-1. Fomentar una actitud positiva hacia las matemáticas
-2. Desarrollar el pensamiento lógico y analítico
-3. Preparar a los estudiantes para enfrentar desafíos matemáticos con confianza
-4. Demostrar la aplicación práctica de las matemáticas en la vida cotidiana
+<ol>
+  <li>Fomentar una actitud positiva hacia las matemáticas</li>
+  <li>Desarrollar el pensamiento lógico y analítico</li>
+  <li>Preparar a los estudiantes para enfrentar desafíos matemáticos con confianza</li>
+  <li>Demostrar la aplicación práctica de las matemáticas en la vida cotidiana</li>
+</ol>
 
-Mathia está comprometida con hacer que cada estudiante descubra su potencial matemático y se convierta en un verdadero héroe de los números.
+<p>Mathia está comprometida con hacer que cada estudiante descubra su potencial matemático y se convierta en un verdadero héroe de los números.</p>
+:ET

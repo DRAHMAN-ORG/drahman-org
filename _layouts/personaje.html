@@ -7,9 +7,38 @@ layout: default
         <img src="{{ page.image | default: '/assets/images/default-character.webp' | relative_url }}" alt="{{ page.title }}" class="personaje__image" width="300" height="300">
     </header>
     
-    <div class="personaje__content">
-        {{ content }}
+    <div class="personaje__metadata">
+        {% if page.role %}<p><strong>Rol:</strong> {{ page.role }}</p>{% endif %}
+        {% if page.abilities %}
+        <p><strong>Habilidades:</strong></p>
+        <ul>
+            {% for ability in page.abilities %}
+            <li>{{ ability }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </div>
+
+    <section class="personaje__description">
+        {{ content }}
+    </section>
+
+    {% if page.quote %}
+    <blockquote class="personaje__quote">
+        <p>"{{ page.quote }}"</p>
+    </blockquote>
+    {% endif %}
+
+    {% if page.related_characters %}
+    <section class="personaje__related">
+        <h2>Personajes Relacionados</h2>
+        <ul>
+        {% for character in page.related_characters %}
+            <li><a href="{{ character.url | relative_url }}">{{ character.name }}</a></li>
+        {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
 
     <footer class="personaje__footer">
         <a href="{{ '/#characters' | relative_url }}" class="button">Volver a Personajes</a>

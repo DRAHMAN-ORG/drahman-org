@@ -8,22 +8,24 @@
 // Base styles
 @import "base";
 @import "typography";
-
-// Layout
-@import "layout";
 @import "grid";
 
 // Components
-@import "components/header";
-@import "components/footer";
 @import "components/buttons";
+@import "components/footer";
+@import "components/header";
 @import "components/navigation";
 
 // Pages
 @import "pages/home";
 @import "pages/personajes";
 
+// Layout
+@import "layout";
+
 // Utilities
 @import "utilities";
 
-// Existing styles (to be moved to appropriate partial files)
+// Additional styles
+@import "styles";
+@import "personajes";
