@@ -10,6 +10,7 @@ markdown: kramdown
 # Plugins
 plugins:
   - jekyll-feed
+#  - jekyll-paginate  # If you're using pagination
 
 # Exclude files from processing
 exclude:
@@ -20,7 +21,7 @@ exclude:
 
 # Contact information
 email: cluciani@gmail.com
-github_username: jekyll
+github_username: ChristianLuciani  # Update this to your actual GitHub username
 
 # Collections
 collections:
@@ -35,23 +36,27 @@ defaults:
       type: "personajes"
     values:
       layout: "personaje"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "index.md"
+    values:
+      layout: "default"
+      permalink: /
 
+# Sass settings
 sass:
   sass_dir: _sass
   style: compressed
 
-# Other settings (preserved from your original config)
-# Uncomment and adjust any of these if needed
-# sass:
-#   sass_dir: _sass
-#   style: compressed
+# Include additional files/folders
+include:
+  - _pages
 
-# Include additional files/folders if necessary
-# include:
-#   - _pages
+#Timezone setting if needed
+timezone: America/Guayaquil # Uncomment and set this to Ecuador's timezone if needed
 
-# Timezone setting if needed
-# timezone: YOUR_TIMEZONE
-
-# Additional custom variables
+# Additional custom variables can be added here
 # custom_var: value

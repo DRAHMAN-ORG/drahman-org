@@ -1,7 +1,5 @@
-.button {
-    background-color: $primary-color;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
+// Import all component styles here
+@import "components/buttons";
+@import "components/footer";
+@import "components/header";
+@import "components/navigation";

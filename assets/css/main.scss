@@ -1,6 +1,5 @@
 ---
 ---
-
 // Variables and mixins
 @import "variables";
 @import "mixins";
@@ -11,14 +10,7 @@
 @import "grid";
 
 // Components
-@import "components/buttons";
-@import "components/footer";
-@import "components/header";
-@import "components/navigation";
-
-// Pages
-@import "pages/home";
-@import "pages/personajes";
+@import "components";
 
 // Layout
 @import "layout";
@@ -29,3 +21,7 @@
 // Additional styles
 @import "styles";
 @import "personajes";
+
+// Pages
+// @import "pages/home";
+// @import "pages/personajes";

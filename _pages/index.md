@@ -2,6 +2,7 @@
 layout: default
 title: Inicio
 description: "Drahmán: Plataforma educativa innovadora que integra IA de forma ética y responsable en el aula. Descubre cómo transformar la educación con los guardianes del conocimiento."
+permalink: /
 ---
 
 <section class="hero" aria-labelledby="hero-title">
@@ -21,7 +22,7 @@ description: "Drahmán: Plataforma educativa innovadora que integra IA de forma 
     <div class="features__grid">
         {% for feature in site.data.features %}
         <div class="feature">
-            <img src="/assets/images/{{ feature[0] | slugify }}.webp" alt="Icono de {{ feature[0] }}" class="feature__image" width="80" height="80" loading="lazy">
+            <img src="{{ site.baseurl }}/assets/images/{{ feature[0] | slugify }}.webp" alt="Icono de {{ feature[0] }}" class="feature__image" width="80" height="80" loading="lazy">
             <h3 class="feature__title">{{ feature[0] }}</h3>
             <p class="feature__description">{{ feature[1] }}</p>
         </div>
@@ -37,7 +38,7 @@ description: "Drahmán: Plataforma educativa innovadora que integra IA de forma 
     <div class="characters__grid">
         {% for personaje in site.personajes %}
         <div class="character">
-            <img src="{{ personaje.image | default: '/assets/images/default-character.webp' | relative_url }}" alt="{{ personaje.title }}" class="character__image" width="150" height="150" loading="lazy">
+           <img src="{{ site.baseurl }}{{ personaje.image }}" alt="{{ personaje.title }}" class="character__image" width="150" height="150" loading="lazy">
             <h3 class="character__name">{{ personaje.title }}</h3>
             <p class="character__description">{{ personaje.description }}</p>
             <a href="{{ personaje.url | relative_url }}" class="button">¡Conoce a {{ personaje.title }}!</a>

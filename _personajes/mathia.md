@@ -1,7 +1,8 @@
 ---
 layout: personaje
-title: Mathia Drahmán - Tu Héroe de las Matemáticas
-image: /drahman-org/assets/images/Mathia_result.webp
+title: Mathia Drahmán
+subtitle: Tu Héroe de las Matemáticas 
+image: /assets/images/Mathia_result.webp
 role: Maestra de las Matemáticas
 abilities: 
   - Resolución creativa de problemas
@@ -21,6 +22,7 @@ estermalink: /personajes/mathia/
   <img src="{{ page.image | relative_url }}" alt="Ilustración de Mathia Drahmán, un dragón héroe de las matemáticas con ojos llenos de sabiduría" class="personaje-image">
   <div class="personaje-description">
     <h1>{{ page.title }} 🦸‍♀️🔢</h1>
+    <h2>{{ page.subtitle }}</h2>   
     <p>Nace en la latitud cero, donde el sol besa al mar, 🌊<br>
     Mathia Drahmán, el héroe que vino a brillar. 🌟<br>
     Con mente ágil y corazón ardiente, ❤️‍🔥<br>

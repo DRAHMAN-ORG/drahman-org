@@ -1,7 +1,11 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3.3"
-gem "jekyll-feed"
+
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  # Add any other Jekyll plugins you're using here
+end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
