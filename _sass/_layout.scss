@@ -1,5 +1,72 @@
+// _layout.scss
+// Este archivo contiene estilos para la estructura general del sitio
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+  width: 100%;
+  max-width: var(--breakpoint-xl);
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+}
+
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  background: linear-gradient(45deg, 
+      var(--color-primary), 
+      var(--color-accent), 
+      var(--color-secondary)
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 60s ease infinite;
+}
+
+@keyframes gradientBG {
+  0%, 100% { background-position: 0% 50%; }
+  25%, 75% { background-position: 50% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.section {
+  padding: var(--spacing-large) 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--breakpoint-xl);
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+}
+
+.section__title {
+  margin-bottom: var(--spacing-medium);
+  text-align: center;
+}
+
+.section__text {
+  margin-bottom: var(--spacing-medium);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-medium);
+}
+
+.characters__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-large);
+  margin-top: var(--spacing-large);
+}
+
+.character__description {
+  margin-top: var(--spacing-small);
+}

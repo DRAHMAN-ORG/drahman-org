@@ -1,7 +1,8 @@
 # Site settings
 title: Drahmán - Enciende el Fuego del Conocimiento
 description: Plataforma educativa innovadora que integra IA de forma ética y responsable en el aula
-baseurl: "/drahman-org" # Keep this if it's correct for your GitHub Pages setup
+#baseurl: "/drahman-org" # Keep this if it's correct for your GitHub Pages setup
+baseurl: "" # Cambia esto de "/drahman-org" a una cadena vacía
 url: "https://drahman-org.github.io" # Your GitHub Pages URL
 
 # Build settings
@@ -28,6 +29,9 @@ collections:
   personajes:
     output: true
     permalink: /personajes/:name/
+  pages:
+    output: true
+    permalink: /:name/     
 
 # Defaults
 defaults:
@@ -55,8 +59,29 @@ sass:
 include:
   - _pages
 
+# Collections
+# collections:
+ # pages:
+ #   output: true
+ #   permalink: /:name/ 
+
 #Timezone setting if needed
 timezone: America/Guayaquil # Uncomment and set this to Ecuador's timezone if needed
 
 # Additional custom variables can be added here
 # custom_var: value
+# author settings
+author:
+  name: Christian Luciani
+  email: cluciani@gmail.com
+photo: assets/img/balnquitodrahman.jpeg
+address: Cumbaya
+phone: +593 555 555 555
+
+#organization settings
+organization:
+  name: Drahmán
+  email: drahman-org@gmail.com
+  photo: assets/img/balnquitodrahman.jpeg
+  address: Cumbaya
+  phone: +593 555 555 555

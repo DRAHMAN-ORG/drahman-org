@@ -6,12 +6,14 @@
 ├── _config.yml
 ├── _data
 │   └── features.yml
+├── _draft
 ├── _includes
 │   ├── footer.html
 │   ├── head.html
 │   ├── header.html
 │   ├── navigation.html
-│   └── scripts.html
+│   ├── scripts.html
+│   └── subscribe.html
 ├── _layouts
 │   ├── default.html
 │   ├── page.html
@@ -19,7 +21,8 @@
 │   └── post.html
 ├── _pages
 │   ├── about.markdown
-│   └── index.md
+│   ├── index.md
+│   └── subscribe.md
 ├── _personajes
 │   └── mathia.md
 ├── _posts
@@ -66,13 +69,13 @@
 │   │   ├── explorador-de-ia.webp
 │   │   ├── favicon.ico
 │   │   ├── flaviconDrahmán_result.png
-│   │   ├── ia-etica-en-el-aula.webp
+│   │   ├── ia-ética-en-el-aula.webp
 │   │   ├── planifia-asistente-del-maestro.webp
-│   │   └── recursos-dinamicos.webp
+│   │   └── recursos-dinámicos.webp
 │   └── js
 │       ├── personajes.js
 │       ├── script.js
 │       └── theme-toggle.js
 └── tree.md
 
-14 directories, 62 files
+15 directories, 64 files

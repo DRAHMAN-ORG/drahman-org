@@ -1,0 +1,31 @@
+<div class="subscription-form-container">
+    <div id="loading-message" class="loading">Cargando formulario de suscripción...</div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScWG5bxxue-mbQLOGOgA4M4GWHvjqgmNs1h_zGRvZja6LRBbA/viewform?embedded=true" width="100%" frameborder="0" marginheight="0" marginwidth="0" id="subscription-form" style="display: none;">Cargando el formulario de suscripción...</iframe>
+  </div>
+ 
+ 
+  <div class="privacy-notice">
+    <h3>¿Problemas para ver el formulario?</h3>
+    <p>Si no puedes ver el formulario de suscripción, es posible que tu navegador tenga configuraciones de privacidad que bloquean contenido de terceros. Tienes las siguientes opciones:</p>
+    <ol>
+      <li>Ajusta temporalmente la configuración de privacidad de tu navegador para este sitio.</li>
+      <li>Intenta usar un navegador diferente.</li>
+    </ol>
+     <!-- <li>Suscríbete directamente enviando un correo electrónico a <a href="mailto:suscripciones@drahman.org">suscripciones@drahman.org</a> con el asunto "Suscribir".</li>
+
+    <p>Respetamos tu privacidad y entendemos si prefieres no modificar tu configuración. Siempre puedes optar por el método de correo electrónico para suscribirte.</p>-->
+ </div>
+   
+  <script>
+    window.addEventListener('message', function(e) {
+      var iframe = document.getElementById('subscription-form');
+      if (iframe.contentWindow === e.source) {
+        iframe.style.height = e.data.height + 'px';
+      }
+    });
+  
+    document.getElementById('subscription-form').onload = function() {
+      document.getElementById('loading-message').style.display = 'none';
+      this.style.display = 'block';
+    };
+  </script>
