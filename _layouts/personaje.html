@@ -1,46 +1,128 @@
 ---
 layout: default
 ---
-<article class="personaje">
-    <header class="personaje__header">
-        <h1 class="personaje__title">{{ page.title }}</h1>
-        <img src="{{ page.image | default: '/assets/images/default-character.webp' | relative_url }}" alt="{{ page.title }}" class="personaje__image" width="300" height="300">
-    </header>
-    
-    <div class="personaje__metadata">
-        {% if page.role %}<p><strong>Rol:</strong> {{ page.role }}</p>{% endif %}
-        {% if page.abilities %}
-        <p><strong>Habilidades:</strong></p>
-        <ul>
-            {% for ability in page.abilities %}
-            <li>{{ ability }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
+<article class="personaje" itemscope itemtype="http://schema.org/Character">
+  <header class="personaje__hero">
+    {% if page.image %}
+      {% capture image_path %}assets/images/{{ page.image }}.webp{% endcapture %}
+      {% responsive_image_block %}
+        path: {{ image_path }}
+        alt: "Heroe de {{ page.personaje | capitalize }}"
+        class: "personaje__hero-image"
+      {% endresponsive_image_block %}
+    {% endif %}
+   <!-- <img src="{{ page.image | default: '/assets/images/default-character.webp' | relative_url }}" 
+         alt="{{ page.title }}" 
+         class="personaje__hero-image" 
+         width="1200" height="1200"
+         itemprop="image"> -->
+    <div class="personaje__hero-overlay">
+      <h1 class="personaje__title" itemprop="name">{{ page.title }}</h1>
+      <h2 class="personaje__subtitle">{{ page.subtitle }}</h2>
+      <p class="personaje__role" itemprop="jobTitle">{{ page.role }}</p>
+      <p class="personaje__intro-text">
+        {{ page.intro_text }}
+      </p>
+      <a href="#grades" class="button">¡Descubre tu {{ page.title }}! 🚀</a> <br><br><br>
     </div>
+  </header>
 
-    <section class="personaje__description">
-        {{ content }}
-    </section>
-
-    {% if page.quote %}
+  <section class="personaje__intro">
+    <p class="personaje__description">
+      {{ page.title }} es <span itemprop="jobTitle">{{ page.role }}</span> en el mundo de Drahmán. 
+      Con habilidades como {% for ability in page.abilities %}
+      <span itemprop="knowsAbout">{{ ability }}</span>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}, {{ page.title }} está listo para guiarte en tu aventura de aprendizaje.
+    </p>
     <blockquote class="personaje__quote">
-        <p>"{{ page.quote }}"</p>
+      <p>"<span itemprop="catchPhrase">{{ page.quote }}</span>"</p>
     </blockquote>
-    {% endif %}
+    <br><br><br>
+  </section>
 
-    {% if page.related_characters %}
-    <section class="personaje__related">
-        <h2>Personajes Relacionados</h2>
-        <ul>
-        {% for character in page.related_characters %}
-            <li><a href="{{ character.url | relative_url }}">{{ character.name }}</a></li>
-        {% endfor %}
-        </ul>
-    </section>
-    {% endif %}
+  <section id="grades" class="personaje__grades">
+    <h2>{{ page.title }} para cada grado 🎓</h2>
+    <p>Elige {{ page.title }} que mejor se adapte a tu nivel de aprendizaje:</p>
+    <div class="personaje__grade-buttons">
+      {% for grade in (1..10) %}
+        {% assign grade_name = grade | append: '' %}
+        {% case grade %}
+          {% when 1 %}
+            {% assign grade_name = grade_name | append: 'ero' %}
+            {% assign emoji = '🐣' %}
+          {% when 2 %}
+            {% assign grade_name = grade_name | append: 'do' %}
+            {% assign emoji = '🐥' %}
+          {% when 3 %}
+            {% assign grade_name = grade_name | append: 'ro' %}
+            {% assign emoji = '🐤' %}
+          {% when 4 %}
+            {% assign grade_name = grade_name | append: 'to' %}
+            {% assign emoji = '🐔' %}
+          {% when 5 %}
+            {% assign grade_name = grade_name | append: 'to' %}
+            {% assign emoji = '🦅' %}
+          {% when 6 %}
+            {% assign grade_name = grade_name | append: 'to' %}
+            {% assign emoji = '🐉' %}
+          {% when 7 %}
+            {% assign grade_name = grade_name | append: 'mo' %}
+            {% assign emoji = '🦋' %}
+          {% when 8 %}
+            {% assign grade_name = grade_name | append: 'vo' %}
+            {% assign emoji = '🐬' %}
+          {% when 9 %}
+            {% assign grade_name = grade_name | append: 'no' %}
+            {% assign emoji = '🦁' %}
+          {% when 10 %}
+            {% assign grade_name = grade_name | append: 'mo' %}
+            {% assign emoji = '🦉' %}
+        {% endcase %}
+        <a href="https://poe.com/{{ page.personaje }}_{{ grade_name | strip | replace: ' ', '_' }}_Drahman" 
+           class="cta-button" 
+           aria-label="{{ page.title }} para {{ grade_name }}Grado">
+        {{ page.title }} <br>
+        {{ grade_name }} Grado {{ emoji }}
+        </a>
+      {% endfor %}
+  
+    </div>
+    <br><br><br>
+  </section>
 
-    <footer class="personaje__footer">
-        <a href="{{ '/#characters' | relative_url }}" class="button">Volver a Personajes</a>
-    </footer>
+  <section class="personaje__content">
+    {{ content }}
+    <br><br><br>
+  </section>
+
+  {% if page.related_characters %}
+  <section class="personaje__related">
+    <h2>Personajes Relacionados</h2>
+    <ul>
+    {% for character in page.related_characters %}
+        <li><a href="{{ character.url | relative_url }}" itemprop="colleague">{{ character.name }}</a></li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+
+  <footer class="personaje__footer">
+    <a href="{{ '/#characters' | relative_url }}" class="button">Volver a Personajes</a>
+    <br><br><br>
+  </footer>
 </article>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Character",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description | strip_html | strip_newlines | truncate: 160 }}",
+  "image": "{{ page.image | default: '/assets/images/default-character.webp' | absolute_url }}",
+  "url": "{{ page.url | absolute_url }}",
+  "jobTitle": "{{ page.role }}",
+  "knowsAbout": {{ page.abilities | jsonify }},
+  "catchPhrase": "{{ page.quote }}"
+}
+</script>

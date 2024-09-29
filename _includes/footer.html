@@ -1,5 +1,13 @@
-<footer>
-    <small>&copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
-      {{ site.organization.name }}. Todos los derechos reservados. <span style="float:inline-end"> Creado por  {{ site.author.name }}</span></small>
+<footer class="footer"> 
+        <div class="footer__content">
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">About</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+          </ul>
+          <small class="footer__copyright">&copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
+            {{ site.organization.name }}. Todos los derechos reservados. <span style="float:inline-end"> Creado por  {{ site.author.name }}</span></small>
+        </div>
+ 
   </footer>
   

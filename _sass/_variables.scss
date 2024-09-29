@@ -3,10 +3,14 @@
 
 // Colores principales (variables Sass)
 $color-primary: #FF6B6B;
-$color-secondary: #4ECDC4;
-$color-accent: #feeb9d;
+$color-secondary: #4EBCCD;
+$color-accent: #FEEB9D;
 $color-background: #F8F9FA;
 $color-text: #333333;
+
+// Nuevos colores
+$color-tertiary: #6C5CE7;  // Púrpura vibrante
+$color-quaternary: #55E6C1; // Verde menta
 
 // Colores para el tema oscuro
 $color-background-dark: #222831;
@@ -14,6 +18,10 @@ $color-text-dark: #EEEEEE;
 $color-primary-dark: #FF8E8E;
 $color-secondary-dark: #6BE0D5;
 $color-accent-dark: #FFE566;
+
+// Nuevos colores para el tema oscuro
+$color-tertiary-dark: #9C88FF;  // Púrpura más claro
+$color-quaternary-dark: #72FFAC; // Verde menta más claro
 
 // Tipografía
 $font-family-primary: 'Poppins', sans-serif;
@@ -25,7 +33,7 @@ $font-size-small: 0.875rem;
 $line-height-base: 1.6;
 
 // Espaciado
-$spacing-unit: 8px;
+$spacing-unit: 10px;
 $spacing-small: $spacing-unit * 2;
 $spacing-medium: $spacing-unit * 3;
 $spacing-large: $spacing-unit * 5;
@@ -44,12 +52,25 @@ $breakpoint-xl: 1200px;
 
 // Variables CSS
 :root {
-    // Colores
+    // Colores existentes
     --color-primary: #{$color-primary};
     --color-secondary: #{$color-secondary};
     --color-accent: #{$color-accent};
     --color-background: #{$color-background};
     --color-text: #{$color-text};
+
+    // Nuevos colores
+    --color-tertiary: #{$color-tertiary};
+    --color-quaternary: #{$color-quaternary};
+
+    // Colores para el tema oscuro (si los quieres disponibles globalmente)
+    --color-primary-dark: #{$color-primary-dark};
+    --color-secondary-dark: #{$color-secondary-dark};
+    --color-accent-dark: #{$color-accent-dark};
+    --color-background-dark: #{$color-background-dark};
+    --color-text-dark: #{$color-text-dark};
+    --color-tertiary-dark: #{$color-tertiary-dark};
+    --color-quaternary-dark: #{$color-quaternary-dark};
     
     // Tipografía
     --font-family-primary: #{$font-family-primary};
@@ -80,10 +101,11 @@ $breakpoint-xl: 1200px;
 
 // Tema oscuro
 [data-theme="dark"] {
-    --color-background: #{$color-background-dark};
-    --color-text: #{$color-text-dark};
     --color-primary: #{$color-primary-dark};
     --color-secondary: #{$color-secondary-dark};
     --color-accent: #{$color-accent-dark};
-    --box-shadow: #{$box-shadow-dark};
+    --color-background: #{$color-background-dark};
+    --color-text: #{$color-text-dark};
+    --color-tertiary: #{$color-tertiary-dark};
+    --color-quaternary: #{$color-quaternary-dark};
 }

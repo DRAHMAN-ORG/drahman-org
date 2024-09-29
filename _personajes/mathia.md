@@ -2,53 +2,39 @@
 layout: personaje
 title: Mathia Drahmán
 subtitle: Tu Héroe de las Matemáticas 
-image: /assets/images/Mathia_result.webp
-role: Maestra de las Matemáticas
+personaje: Mathia
+image: MATHIA
+role: Maestro de las Matemáticas
 abilities: 
   - Resolución creativa de problemas
   - Pensamiento lógico y analítico
   - Visualización de conceptos matemáticos
 quote: Las matemáticas son el lenguaje del universo, y juntos aprenderemos a hablarlo fluidamente.
+
+description: Mathia Drahmán es el guardián de las Matemáticas en el mundo de Drahmán. Con su ingenio agudo y su pasión por los números, Mathia transforma conceptos matemáticos complejos en emocionantes aventuras lógicas...
+permalink: /personajes/mathia/
+intro_text: >
+  Nace en la latitud cero, donde el sol besa al mar, 🌊
+  Mathia Drahmán, el héroe que vino a brillar. 🌟
+  Con mente ágil y corazón ardiente, ❤️‍🔥
+  Defiende la justicia con números incandescentes. 🔥🧠
+
 related_characters:
   - name: Cenia
     url: /personajes/cenia/
   - name: Lenia
     url: /personajes/lenia/
-description: Mathia Drahmán es el guardian de las Matemáticas en el mundo de Drahmán. Con su ingenio agudo y su pasión por los números, Mathia transforma conceptos matemáticos complejos en emocionantes aventuras lógicas...
-estermalink: /personajes/mathia/
+  - name: Socia
+    url: /personajes/socia/
 ---
 
-<section id="about" class="personaje-hero">
-  <img src="{{ page.image | relative_url }}" alt="Ilustración de Mathia Drahmán, un dragón héroe de las matemáticas con ojos llenos de sabiduría" class="personaje-image">
-  <div class="personaje-description">
-    <h1>{{ page.title }} 🦸‍♀️🔢</h1>
-    <h2>{{ page.subtitle }}</h2>   
-    <p>Nace en la latitud cero, donde el sol besa al mar, 🌊<br>
-    Mathia Drahmán, el héroe que vino a brillar. 🌟<br>
-    Con mente ágil y corazón ardiente, ❤️‍🔥<br>
-    Defiende la justicia con números incandescentes. 🔥🧠</p>
-    <a href="#grades" class="cta-button">¡Descubre tu Mathia! 🚀</a>
-  </div>
-</section>
-
-<section id="grades" aria-labelledby="grades-title">
-  <h2 id="grades-title">Mathia para cada grado 🎓</h2>
-  <p>Elige la Mathia que mejor se adapte a tu nivel de aprendizaje:</p>
-  <div class="personaje-grades">
-    <a href="https://poe.com/Mathia_1ero_Drahman" class="personaje-grade">Mathia 1er Grado 🐣</a>
-    <a href="https://poe.com/Mathia_2do_Drahman" class="personaje-grade">Mathia 2do Grado 🐥</a>
-    <a href="https://poe.com/Mathia_3ero_Drahman" class="personaje-grade">Mathia 3er Grado 🐤</a>
-    <a href="https://poe.com/Mathia_4to_Drahman" class="personaje-grade">Mathia 4to Grado 🐔</a>
-    <a href="https://poe.com/Mathia_5to_Drahman" class="personaje-grade">Mathia 5to Grado 🦅</a>
-    <a href="https://poe.com/Mathia_6to_Drahman" class="personaje-grade">Mathia 6to Grado 🐉</a>
-    <a href="https://poe.com/Mathia_7mo_Drahman" class="personaje-grade">Mathia 7mo Grado 🦋</a>
-    <a href="https://poe.com/Mathia_8vo_Drahman" class="personaje-grade">Mathia 8vo Grado 🐬</a>
-    <a href="https://poe.com/Mathia_9no_Drahman" class="personaje-grade">Mathia 9no Grado 🦁</a>
-    <a href="https://poe.com/Mathia_10mo_Drahman" class="personaje-grade">Mathia 10mo Grado 🦉</a>
-  </div>
-</section>
-
 <section id="examples" aria-labelledby="examples-title">
+       {% responsive_image_block %}
+            path: assets/images/{{page.image}}.webp
+            alt: "Personaje 3D de {{ page.title }}"
+            class: "feature__image"
+            loading: lazy
+        {% endresponsive_image_block %}
   <h2 id="examples-title">Aprende con Mathia 📚✨</h2>
   <p>Mathia está aquí para hacer que aprender matemáticas sea divertido y emocionante. ¡Mira estos ejemplos!</p>
   
@@ -65,19 +51,22 @@ estermalink: /personajes/mathia/
   </div>
 </section>
 
+
 <section id="video" aria-labelledby="video-title">
   <h2 id="video-title">Conoce más sobre Mathia 🎥</h2>
   <div class="video-placeholder" role="img" aria-label="Espacio reservado para un video de presentación de Mathia"></div>
 </section>
 
-## Habilidades de Mathia
+
+### Habilidades de Mathia
 
 - Resolución creativa de problemas matemáticos
 - Transformación de conceptos abstractos en ejemplos concretos y divertidos
 - Adaptación a diferentes niveles de aprendizaje, desde primaria hasta bachillerato
 - Motivación y apoyo emocional para superar el miedo a las matemáticas
 
-## Misión de Mathia
+
+### Misión de Mathia
 
 La misión de Mathia es inspirar a los estudiantes a ver la belleza y la utilidad de las matemáticas en el mundo que les rodea. A través de sus enseñanzas, busca:
 
@@ -87,3 +76,9 @@ La misión de Mathia es inspirar a los estudiantes a ver la belleza y la utilida
 4. Demostrar la aplicación práctica de las matemáticas en la vida cotidiana
 
 Mathia está comprometida con hacer que cada estudiante descubra su potencial matemático y se convierta en un verdadero héroe de los números.
+
+
+<section id="cta" class="cta-section">
+  <h2>¿Listo para aprender con {{ page.title }}?</h2>
+  <a href="#grades" class="button">¡Comienza tu aventura matemática ahora! 🚀</a>
+</section>

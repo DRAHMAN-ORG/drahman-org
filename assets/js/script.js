@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.querySelector('nav');
+    const menuToggle = document.querySelector('.header__menu-toggle'); 
+    const nav = document.querySelector('.header__menu'); 
 
     menuToggle.addEventListener('click', function() {
-        nav.classList.toggle('active');
+        nav.classList.toggle('active');       // Toggle the 'active' class on the menu
         const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !isExpanded);
+        this.setAttribute('aria-expanded', !isExpanded); // Update aria-expanded attribute
     });
 
-    // Cierra el menú si se hace clic fuera de él
+    // Close the menu if clicked outside
     document.addEventListener('click', function(event) {
         const isClickInsideNav = nav.contains(event.target);
         const isClickOnMenuToggle = menuToggle.contains(event.target);
@@ -18,55 +18,31 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
-    // Maneja la navegación con teclado
+    // Handle keyboard navigation (Escape key)
     nav.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             nav.classList.remove('active');
             menuToggle.setAttribute('aria-expanded', 'false');
-            menuToggle.focus();
+            menuToggle.focus(); 
         }
     });
 });
-// Archivo: hamburger-menu.js
 
+// Handle scroll effect on the header (if applicable)
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const headerNav = document.querySelector('.header__nav');
     const header = document.querySelector('.header');
-    const menuItems = document.querySelectorAll('.header__menu-item');
+    const scrollThreshold = 50; 
 
-    function toggleMenu() {
-        header.classList.toggle('menu-open');
-        
-        const isExpanded = header.classList.contains('menu-open');
-        menuToggle.setAttribute('aria-expanded', isExpanded);
-        
-        if (isExpanded) {
-            headerNav.style.display = 'block';
+    function handleScroll() {
+        const scrollRatio = Math.min(window.scrollY / scrollThreshold, 1);
+        header.style.setProperty('--scroll-ratio', scrollRatio); 
+
+        if (scrollRatio > 0) {
+            header.classList.add('scrolled');
         } else {
-            headerNav.style.display = 'none';
+            header.classList.remove('scrolled');
         }
     }
 
-    menuToggle.addEventListener('click', toggleMenu);
-
-    // Cerrar el menú al hacer clic en un elemento del menú
-    menuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            if (window.innerWidth <= 768) { // Asume que 768px es el breakpoint móvil
-                toggleMenu();
-            }
-        });
-    });
-
-    // Ajustar la visibilidad del menú en resize
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            headerNav.style.display = 'block';
-            header.classList.remove('menu-open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-        } else if (!header.classList.contains('menu-open')) {
-            headerNav.style.display = 'none';
-        }
-    });
+    window.addEventListener('scroll', handleScroll);
 });

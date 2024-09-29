@@ -1,37 +1,23 @@
 # Site settings
-title: Drahmán - Enciende el Fuego del Conocimiento
-description: Plataforma educativa innovadora que integra IA de forma ética y responsable en el aula
-#baseurl: "/drahman-org" # Keep this if it's correct for your GitHub Pages setup
-baseurl: "" # Cambia esto de "/drahman-org" a una cadena vacía
-url: "https://drahman-org.github.io" # Your GitHub Pages URL
+title: Drahmán Educational Platform
+description: An innovative educational platform featuring AI-powered characters
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+logo: /assets/images/logo.png
+favicon: /assets/images/favicon_io/favicon.ico
 
 # Build settings
 markdown: kramdown
-
-# Plugins
-plugins:
-  - jekyll-feed
-#  - jekyll-paginate  # If you're using pagination
-
-# Exclude files from processing
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-
-# Contact information
-email: cluciani@gmail.com
-github_username: ChristianLuciani  # Update this to your actual GitHub username
+permalink: /:categories/:title/
 
 # Collections
 collections:
   personajes:
     output: true
-    permalink: /personajes/:name/
+    permalink: /:collection/:name/
   pages:
     output: true
-    permalink: /:name/     
+    permalink: /:name/
 
 # Defaults
 defaults:
@@ -42,46 +28,70 @@ defaults:
       layout: "personaje"
   - scope:
       path: ""
+      type: "pages"
     values:
-      layout: "default"
+      layout: "page"
   - scope:
-      path: "index.md"
+      path: ""
+      type: "posts"
     values:
-      layout: "default"
-      permalink: /
+      layout: "post"
 
-# Sass settings
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - _draft
+
+# Sass
 sass:
   sass_dir: _sass
   style: compressed
 
-# Include additional files/folders
-include:
-  - _pages
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-responsive-image
 
-# Collections
-# collections:
- # pages:
- #   output: true
- #   permalink: /:name/ 
-
-#Timezone setting if needed
-timezone: America/Guayaquil # Uncomment and set this to Ecuador's timezone if needed
-
-# Additional custom variables can be added here
-# custom_var: value
-# author settings
+# Custom variables
 author:
   name: Christian Luciani
   email: cluciani@gmail.com
-photo: assets/img/balnquitodrahman.jpeg
-address: Cumbaya
-phone: +593 555 555 555
+  twitter_username: cluciani_ve
+  github_username:  ChristianLuciani
+organization: 
+  name:  Drahmán 
+  website:  https://drahman.org
 
-#organization settings
-organization:
-  name: Drahmán
-  email: drahman-org@gmail.com
-  photo: assets/img/balnquitodrahman.jpeg
-  address: Cumbaya
-  phone: +593 555 555 555
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Characters
+    url: /personajes/
+  - title: Subscribe
+    url: /subscribe/
+
+
+# Responsive Images
+responsive_image:
+  template: _includes/responsive-image.html
+  sizes:
+    - width: 320
+    - width: 480
+    - width: 800
+    - width: 1200
+  base_path: assets/images
+  output_path_format: assets/images/resized/%{width}/%{basename}
+  save_to_source: false
+  strip: true
+  quality: 85
+  formats: [webp]
