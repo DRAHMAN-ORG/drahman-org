@@ -1,0 +1,83 @@
+// components/_buttons.scss
+// Estilos para botones
+
+// Contenedor para centrar los botones
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-medium); // Espacio entre botones
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  padding: var(--spacing-small) var(--spacing-large);
+  border: none;
+  border-radius: var(--border-radius);
+  background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+  color: var(--color-tertiary);
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: all var(--transition-speed);
+  box-shadow: var(--box-shadow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  &:hover, &:focus {
+    background: linear-gradient(45deg, var(--color-accent), var(--color-primary));
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 8px var(--color-quaternary);
+    color: var(--color-quaternary)
+  }
+  
+  &--secondary {
+    background: linear-gradient(45deg, var(--color-accent), var(--color-primary));
+    
+    &:hover, &:focus {
+      background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+    }
+  }
+}
+
+[data-theme="dark"] .button {
+  background: linear-gradient(45deg, var(--color-accent), var(--color-primary));
+  
+  &:hover, &:focus {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+  }
+}
+.cta-button {
+  @extend .button; // This inherits the base button styles
+  text-transform: capitalize;
+  font-size: 0.8em;
+  border-radius: calc(var(--border-radius) * 1/4);
+  min-width: 150px; // Adjust this value as needed for grade buttons
+  padding: var(--spacing-small) var(--spacing-medium);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto; // Allow the button to grow vertically
+}
+
+.cta-button-title {
+  font-weight: bold;
+  margin-bottom: 0.2em; // Add some space between the two lines
+}
+
+.cta-button-subtitle {
+  font-size: 0.9em; // Make the second line slightly smaller
+}
+
+.personaje__grade-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-small);
+}

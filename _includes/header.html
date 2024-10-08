@@ -1,0 +1,30 @@
+<header class="header">
+    <div class="container">
+        <nav class="header__nav">
+            <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false"> 
+              <span class="header__menu-toggle-bar"></span>
+              <span class="header__menu-toggle-bar"></span>
+              <span class="header__menu-toggle-bar"></span>
+            </button>
+      <div class="header__branding">
+        <a class="brand-logo" href="{{ '/' | relative_url }}" aria-label="Inicio de Drahmán">
+          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo de {{ site.title }}">
+        </a>
+        <h1 class="header__logo">
+          <a href="{{ '/' | relative_url }}" aria-label="Inicio de Drahmán">Drahmán</a>
+        </h1>
+      </div>
+  
+
+  
+        <ul class="header__menu" role="menubar"> 
+          <li class="header__menu-item" role="none"><a href="{{ '/#about' | relative_url }}" class="header__menu-link" role="menuitem">Acerca&nbsp;de</a></li>
+          <li class="header__menu-item" role="none"><a href="{{ '/#features' | relative_url }}" class="header__menu-link" role="menuitem">Características</a></li>
+          <li class="header__menu-item" role="none"><a href="{{ '/#characters' | relative_url }}" class="header__menu-link" role="menuitem">Personajes</a></li>
+          <li class="header__menu-item" role="none"><a href="{{ '/#myth' | relative_url }}" class="header__menu-link" role="menuitem">El&nbsp;Mito</a></li>
+          <li class="header__menu-item" role="none"><button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro">☾</button></li>
+          <br>
+        </ul>
+      </nav>
+    </div>
+  </header>

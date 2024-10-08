@@ -1,0 +1,25 @@
+.subscription-form-container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px;
+  
+    iframe {
+      width: 100%;
+      max-width: 640px;
+      min-height: 800px; // Aumentado a 800px
+      border: none;
+      transition: height 0.3s ease;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .subscription-form-container iframe {
+      min-height: 1000px; // Aumentado a 1000px para móviles
+    }
+  }
+  
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}

@@ -1,0 +1,97 @@
+# Site settings
+title: Drahmán Educational Platform
+description: An innovative educational platform featuring AI-powered characters
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+logo: /assets/images/logo.png
+favicon: /assets/images/favicon_io/favicon.ico
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
+
+# Collections
+collections:
+  personajes:
+    output: true
+    permalink: /:collection/:name/
+  pages:
+    output: true
+    permalink: /:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "personajes"
+    values:
+      layout: "personaje"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - _draft
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-responsive-image
+
+# Custom variables
+author:
+  name: Christian Luciani
+  email: cluciani@gmail.com
+  twitter_username: cluciani_ve
+  github_username:  ChristianLuciani
+organization: 
+  name:  Drahmán 
+  website:  https://drahman.org
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Characters
+    url: /personajes/
+  - title: Subscribe
+    url: /subscribe/
+
+
+# Responsive Images
+responsive_image:
+  template: _includes/responsive-image.html
+  sizes:
+    - width: 320
+    - width: 480
+    - width: 800
+    - width: 1200
+  base_path: assets/images
+  output_path_format: assets/images/resized/%{width}/%{basename}
+  save_to_source: false
+  strip: true
+  quality: 85
+  formats: [webp]

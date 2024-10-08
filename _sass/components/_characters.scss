@@ -1,0 +1,27 @@
+// components/_characters.scss
+// Estilos para la sección de personajes
+
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+}
+
+.character {
+    text-align: center;
+    transition: transform var(--transition-speed);
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    &__image {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: var(--spacing-medium);
+        box-shadow: var(--box-shadow);
+    }
+}
