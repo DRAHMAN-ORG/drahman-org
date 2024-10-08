@@ -5,7 +5,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Configuraciones específicas para producción
 production:
-  url: "https://drahman-org.github.io/"  # Reemplaza con tu URL de GitHub Pages
+  url: "https://drahman-org.github.io/drahman-org/"  # Reemplaza con tu URL de GitHub Pages
 logo: /assets/images/logo.png
 favicon: /assets/images/favicon_io/favicon.ico
 
