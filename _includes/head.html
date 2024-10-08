@@ -3,15 +3,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="stylesheet" href="{{ '{{ site.baseurl }}/assets/css/main.css' }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon_io/apple-touch-icon.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon_io/favicon-32x32.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon_io/favicon-16x16.png' | relative_url }}">
-  <link rel="manifest" href="{{ '/assets/images/favicon_io/site.webmanifest' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/images/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="{{ site.baseurl }}/assets/images/favicon_io/site.webmanifest">
 
-  <link rel="apple-touch-icon" href="{{ '/path/to/your/touch-icon.png' | relative_url }}"> 
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/path/to/your/touch-icon.png"> 
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <meta name="theme-color" content="#ffffff">

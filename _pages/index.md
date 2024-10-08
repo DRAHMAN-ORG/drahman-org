@@ -34,7 +34,7 @@ permalink: /
               <div class="section-card__content">
             <h3 class="section-card__title">{{ feature[0] }}</h3>
             <p class="section-card__description">{{ feature[1] }}</p>
-                <a href="#" class="button">Conocer más </a>
+                <a href="{{ site.baseurl }}/#" class="button">Conocer más </a>
               </div>
         </div>
         {% endfor %}
@@ -62,7 +62,7 @@ permalink: /
             {% endresponsive_image_block %}
 
             <p>{{ personaje.description }}</p>
-            <a href="{{ personaje.url | relative_url }}" class="button">¡Conoce a {{ personaje.title }}!</a> <br><br> 
+            <a href="{{ site.baseurl }}{{ personaje.url }}" class="button">¡Conoce a {{ personaje.title }}!</a> <br><br> 
         </div>
         {% endfor %}
     </div> 
@@ -73,7 +73,7 @@ permalink: /
     <p>Pronto descubrirás la fascinante leyenda de los Drahmanes, guardianes ancestrales del conocimiento que han emergido en la era digital. Mantente atento para sumergirte en esta épica historia que une la sabiduría antigua con la tecnología moderna.</p>
     <p>Sé el primero en conocer el mito</p>     
     <div class="button-container">
-    <a href="{{ '/subscribe' | relative_url }}" class="button">Suscríbete</a>
+    <a href="{{ site.baseurl }}/subscribe" class="button">Suscríbete</a>
     </div>
 </section>
 
