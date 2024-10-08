@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Sitemap: /sitemap.xml
+=======
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+>>>>>>> 2ebf18f957638b1c97bbeedfafeb820eaaa57fc4
