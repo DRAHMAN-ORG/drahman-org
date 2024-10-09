@@ -1,9 +1,10 @@
 {% capture srcset %}
 {% for i in resized %}
-    /{{ i.path }} {{ i.width }}w,
+    {{ site.baseurl | append: '/' | append: i.path }} {{ i.width }}w,
 {% endfor %}
 {% endcapture %}
+
 <picture>
   <source type="image/webp" srcset="{{ srcset | strip_newlines }}">
-  <img src="/{{ path }}" alt="{{ alt }}" width="{{ original.width }}" height="{{ original.height }}">
+  <img src="{{ site.baseurl | append: '/' | append: path }}" alt="{{ alt }}" {% if original.width %}width="{{ original.width }}"{% endif %} {% if original.height %}height="{{ original.height }}"{% endif %}>
 </picture>

@@ -23,7 +23,7 @@ layout: default
       <p class="personaje__intro-text">
         {{ page.intro_text }}
       </p>
-      <a href="#grades" class="button">¡Descubre tu {{ page.title }}! 🚀</a> <br><br><br>
+      <a href="{{ site.baseurl }}/#grades" class="button">¡Descubre tu {{ page.title }}! 🚀</a> <br><br><br>
     </div>
   </header>
 
@@ -100,7 +100,7 @@ layout: default
     <h2>Personajes Relacionados</h2>
     <ul>
     {% for character in page.related_characters %}
-        <li><a href="{{ character.url | relative_url }}" itemprop="colleague">{{ character.name }}</a></li>
+        <li><a href="{{ site.baseurl }}{{ character.url}}" itemprop="colleague">{{ character.name }}</a></li>
     {% endfor %}
     </ul>
   </section>
@@ -108,7 +108,7 @@ layout: default
 
 
   <footer class="personaje__footer">
-    <a href="{{ '/#characters' | relative_url }}" class="button">Volver a Personajes</a>
+    <a href="{{ site.baseurl }}/characters" class="button">Volver a Personajes</a>
     <br><br><br>
   </footer>
 </article>

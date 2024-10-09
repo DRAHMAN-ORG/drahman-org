@@ -1,11 +1,14 @@
 # Site settings
 title: Drahmán Educational Platform
 description: An innovative educational platform featuring AI-powered characters
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Configuraciones específicas para producción
+
 production:
-  url: "https://drahman-org.github.io/drahman-org/"  # Reemplaza con tu URL de GitHub Pages
+  baseurl: "/drahman-org"
+  url: "https://drahman-org.github.io"
 logo: /assets/images/logo.png
 favicon: /assets/images/favicon_io/favicon.ico
 
