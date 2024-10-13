@@ -48,7 +48,7 @@ $spacing-xlarge: $spacing-unit * 6;
 $spacing-xxlarge: $spacing-unit * 8;
 
 // Other variables
-$border-radius-small: 10px;   
+$border-radius-small: 15px;   
 $border-radius: 20px;          // Reduce border-radius for a less rounded look on mobile
 $transition-speed: 0.3s;       // Slightly faster transitions for snappier feel
 $box-shadow: 0 0.3125em 0.9375em rgba(0, 0, 0, 0.1); // Use em for responsiveness
@@ -1534,4 +1534,66 @@ img {
   @page {
     margin: 2cm; // Set reasonable margins for the printed page
   }
+}
+
+// AI Model Selector Styles
+.selector-container {
+    position: relative;
+    width: 650px;
+    background-color: var(--color-tertiary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    padding: var(--spacing-unit);
+    margin: var(--spacing-large) auto;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.selector-grid {
+    display: grid;
+    gap: var(--spacing-small);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-auto-rows: 120px;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    color: var(--color-tertiary);
+    background-color: var(--color-quaternary);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    padding: var(--spacing-medium);
+    text-align: center;
+    word-break: break-word;
+
+    &.selected {
+        color: var(--color-background);
+        background-color: var(--color-primary);
+        font-size: calc(var(--font-size-base) * 1.1);
+        box-shadow: var(--box-shadow);
+        transform: scale(1.05);
+        z-index: 10;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--box-shadow);
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    .selector-container {
+        width: 90%;
+    }
+    .selector-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-rows: 100px;
+    }
 }

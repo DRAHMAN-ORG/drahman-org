@@ -43,6 +43,16 @@ layout: default
   <section id="grades" class="personaje__grades">
     <h2>{{ page.title }} para cada grado 🎓</h2>
     <p>Elige {{ page.title }} que mejor se adapte a tu nivel de aprendizaje:</p>
+      <!-- AI Model Selector -->
+  <div class="selector-container" id="selectorContainer">
+    
+    <h4 text-align="center" >Escoje tu proveedor de IA preferido</h4>
+    
+    <div class="selector-grid" id="selectorGrid">
+      
+      <!-- Options will be dynamically added here by JavaScript -->
+    </div>
+  </div>
     <div class="personaje__grade-buttons">
       {% for grade in (1..10) %}
         {% assign grade_name = grade | append: '' %}
@@ -78,15 +88,24 @@ layout: default
             {% assign grade_name = grade_name | append: 'mo' %}
             {% assign emoji = '🦉' %}
         {% endcase %}
-        <a href="https://poe.com/{{ page.personaje }}_{{ grade_name | strip | replace: ' ', '_' }}_Drahman" 
+        <!-- <a href="https://poe.com/{{ page.personaje }}_{{ grade_name | strip | replace: ' ', '_' }}_Drahman" 
            class="cta-button" 
            aria-label="{{ page.title }} para {{ grade_name }}Grado">
         {{ page.title }} <br>
         {{ grade_name }} Grado {{ emoji }}
-        </a>
+        </a> -->
+        <a href="#" 
+        class="cta-button" 
+        data-grade="{{ grade_name | strip | replace: ' ', '_' }}"
+        data-personaje="{{ page.personaje }}"
+        aria-label="{{ page.title }} para {{ grade_name }} Grado">
+       {{ page.title }} <br>
+       {{ grade_name }} Grado {{ emoji }}
+     </a>
       {% endfor %}
   
     </div>
+
     <br><br><br>
   </section>
 
@@ -113,7 +132,9 @@ layout: default
   </footer>
 </article>
 
-<script type="application/ld+json">
+
+<script src="{{ site.baseurl }}/assets/js/ai-selector.js" defer></script>
+<script type="application/ld+json" defer>
 {
   "@context": "http://schema.org",
   "@type": "Character",
