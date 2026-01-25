@@ -86,9 +86,9 @@
   <g class="dancing" stroke="#FEEB9D" stroke-width="1" fill="none" opacity="0.8" filter="url(#glow)">
     <path d="M50,280 C55,270 65,270 70,280 M60,270 C60,275 60,280 60,285 M55,273 C58,276 62,276 65,273"/>
     <path d="M80,280 C85,270 95,270 100,280 M90,270 C90,275 90,280 90,285 M85,273 C88,276 92,276 95,273"/>
+     <path d="M85,280 C85,270 105,270 130,280 M90,270 C90,275 120,280 120,285 M85,273 C88,276 102,276 105,273"/>
   </g>
   
   <!-- Mythical dragon -->
-  <path class="floating" d="M280,220 Q300,190 320,220 Q340,250 360,220 M320,220 Q330,200 340,210 M320,220 Q310,200 300,210" 
-        stroke="#6C5CE7" stroke-width="1.5" fill="none" opacity="0.8" filter="url(#glow)"/>
+
 </svg>
