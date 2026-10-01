@@ -3,9 +3,8 @@
 ## Supported Versions
 
 This repository does not publish releases: it has no tags and no versioned
-branches. The supported state is the current `main` branch, which is the source
-of the published site. Security fixes are applied there; older commits are not
-maintained.
+branches. The supported state is the current `main` branch. Security fixes are
+applied there; older commits are not maintained.
 
 | Branch | Supported          |
 | ------ | ------------------ |
@@ -16,7 +15,8 @@ maintained.
 Drahmán is a static site built with Jekyll. The code maintained in this
 repository is:
 
-- Templates and includes — `_layouts/`, `_includes/`, `_pages/`, `_personajes/`
+- Templates, includes and content pages — `_layouts/`, `_includes/`, `_pages/`,
+  `_personajes/`
 - Stylesheets — `_sass/`
 - Client-side JavaScript — `assets/js/`
 - Build configuration — `_config.yml`, `_config_production.yml`, `Gemfile`
