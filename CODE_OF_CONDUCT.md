@@ -1,4 +1,3 @@
-
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge
@@ -91,3 +90,6 @@ In this repository, the community spaces this Code of Conduct applies to include
 limited to: issues, pull requests, review comments and any other channel of
 `DRAHMAN-ORG/drahman-org`. Reports are received and handled by the maintainer through the
 enforcement contact above; the escalation ladder is the Enforcement Guidelines above.
+
+The official Spanish translation of this Code of Conduct is available at
+<https://www.contributor-covenant.org/es/version/2/1/code_of_conduct/>.
