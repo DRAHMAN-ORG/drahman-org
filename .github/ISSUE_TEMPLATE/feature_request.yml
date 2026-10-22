@@ -1,0 +1,48 @@
+name: Solicitud de funcion
+description: Algo nuevo que quieras ver en el sitio.
+title: "[feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de implementar una funcion nueva, abre primero esta solicitud y espera a que el
+        equipo la valore. Esto evita duplicar trabajo que ya este en marcha.
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Que cambia y por que
+      description: Describe la funcion y el problema que resuelve.
+      placeholder: "Hoy no se puede...; propondria... para..."
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Comportamiento esperado
+      description: Como deberia verse o funcionar cuando este implementado.
+    validations:
+      required: true
+  - type: textarea
+    id: diseno
+    attributes:
+      label: Notas de diseno
+      description: Archivos sospechosos, paginas o layouts implicados, y cualquier preferencia de UI.
+    validations:
+      required: false
+  - type: dropdown
+    id: tamano
+    attributes:
+      label: Tamano estimado
+      description: Ayuda a priorizar la cola de triaje.
+      options:
+        - s (cambio pequeno, una pagina o template)
+        - m (afecta varios layouts o datos)
+        - l (cambia estructura o pipeline de build)
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        **Notas** — Consulta `docs/TRIAGE.md` para el flujo de triaje; si buscas ayuda con
+        algun issue ya abierto, usa la plantilla de bug en su lugar.

@@ -1,5 +1,8 @@
 _site
 .sass-cache
+temp_auto_push.bat
 .jekyll-cache
 .jekyll-metadata
 vendor
+.gitignore
+branch_structure.json

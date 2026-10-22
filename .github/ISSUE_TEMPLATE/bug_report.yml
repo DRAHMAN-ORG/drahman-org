@@ -1,0 +1,57 @@
+name: Reporte de bug
+description: Algo roto en el sitio o en el pipeline de builds.
+title: "[bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe el fallo de forma breve y reproducible. Si encuentras que ya existe un issue
+        para lo mismo, dale +1 en su lugar de abrir uno nuevo.
+  - type: textarea
+    id: repro
+    attributes:
+      label: Repro
+      description: Pasos mínimos para reproducir el problema.
+      placeholder: |
+        1. Abro...
+        2. Hago...
+        3. Aparece...
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Comportamiento esperado
+      description: Lo que debería pasar.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamiento actual
+      description: Lo que pasa en realidad. Incluye el mensaje de error textual si lo hay.
+    validations:
+      required: true
+  - type: textarea
+    id: archivos
+    attributes:
+      label: Archivos sospechosos
+      description: Rutas que parecen implicadas (si las conoces).
+      placeholder: |
+        _layouts/...
+        assets/js/...
+    validations:
+      required: false
+  - type: textarea
+    id: entorno
+    attributes:
+      label: Entorno
+      description: Versión de Ruby (`_config.yml` / `.ruby-version`), navegador, y build (`_site` actualizado o no).
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        **Notas** — Enlaza a `docs/TRIAGE.md` para el flujo de triaje; no dupliques la
+        politica aca.
